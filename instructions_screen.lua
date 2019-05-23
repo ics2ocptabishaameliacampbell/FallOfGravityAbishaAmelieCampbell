@@ -40,7 +40,7 @@ local unmuteButtton
 -- SOUNDS
 -----------------------------------------------------------------------------------------
 -- create sound variables
-local bkgSound = audio.loadSound ( "Sounds/instructions.mp3" ) -- Setting variable to mp3 file
+local bkgSound = audio.loadSound ( "Sounds/bkgMusic.mp3" ) -- Setting variable to mp3 file
 local bkgSoundChannel
 
 -----------------------------------------------------------------------------------------
@@ -49,7 +49,7 @@ local bkgSoundChannel
 
 -- Creating Transitioning Function back to main menu
 local function BackTransition( )
-    composer.gotoScene( "main_menu", {effect = "fade", time = 500})
+    composer.gotoScene( "main_menu", {effect = "fade", time = 200})
 end
 
 -----------------------------------------------------------------------------------------
@@ -134,13 +134,13 @@ function scene:create( event )
 
 -------------------------------------------------------------------------------
 -- Object creation for mute button
-muteButton = display.newImageRect("Images/unmuteButtonPressedAmelieBo@2x .png", 100, 100)
-muteButton.x = display.contentWidth*1/10
+muteButton = display.newImageRect("Images/unmuteButtonPressedAmelieBo@2x .png", 60, 60)
+muteButton.x = display.contentWidth*0.8/10
 muteButton.y = display.contentHeight*9/10 
 muteButton.isVisible = true
 
-unmuteButton = display.newImageRect("Images/muteButtonUnpressedAmelieBo@2x .png", 100, 100)
-unmuteButton.x = display.contentWidth*1/10
+unmuteButton = display.newImageRect("Images/muteButtonUnpressedAmelieBo@2x .png", 60, 60)
+unmuteButton.x = display.contentWidth*0.8/10
 unmuteButton.y = display.contentHeight*9/10
 unmuteButton.isVisible = true 
 
