@@ -208,8 +208,8 @@ function scene:create( event )
 
 
             -- Insert the images here
-            defaultFile = "Images/InstuctionsButtonUnpressedAbishaJ@2x.png",
-            overFile = "Images/InstuctionsButtonPressedAbishaJ@2x.png",
+            defaultFile = "Images/LevelSelectButtonUnpressedAbishaJ@2x.png",
+            overFile = "Images/LevelSelectButtonPressedAbishaJ@2x.png",
 
             -- When the button is released, call the Instructions transition function
             onRelease = LevelSelectTransition

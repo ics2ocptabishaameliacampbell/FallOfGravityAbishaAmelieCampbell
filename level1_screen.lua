@@ -103,7 +103,7 @@ end
 
 local function AskQuestion()
     -- randomly choose 1 out of the 20 questions
-    randomQuestionNumber = math.random(1,7)
+    randomQuestionNumber = math.random(1,20)
 
     -- if the random question number is 1, then ask question 
     if (randomQuestionNumber == 1) then
@@ -188,6 +188,162 @@ local function AskQuestion()
         wrongAnswer1.text = "extratarrastriael"
         wrongAnswer2.text = "extraterestrail"
         wrongAnswer3.text = "extratterestriall"
+
+    -- if the random question number is 8, then ask question 
+    elseif (randomQuestionNumber == 8) then
+
+        -- make fist question visible
+        textQuestion.text = " "
+
+         -- make answers visible
+        correctAnswer.text = ""
+        wrongAnswer1.text = ""
+        wrongAnswer2.text = ""
+        wrongAnswer3.text = ""
+
+    -- if the random question number is 9, then ask question 
+    elseif (randomQuestionNumber == 9) then
+
+        -- make fist question visible
+        textQuestion.text = ""
+
+         -- make answers visible
+        correctAnswer.text = ""
+        wrongAnswer1.text = ""
+        wrongAnswer2.text = ""
+        wrongAnswer3.text = ""
+
+    -- if the random question number is 10, then ask question 
+    elseif (randomQuestionNumber == 10) then
+
+        -- make fist question visible
+        textQuestion.text = " "
+
+         -- make answers visible
+        correctAnswer.text = ""
+        wrongAnswer1.text = ""
+        wrongAnswer2.text = ""
+        wrongAnswer3.text = ""
+
+    -- if the random question number is 11, then ask question 
+    elseif (randomQuestionNumber == 11) then
+
+        -- make fist question visible
+        textQuestion.text = ""
+
+         -- make answers visible
+        correctAnswer.text = ""
+        wrongAnswer1.text = ""
+        wrongAnswer2.text = ""
+        wrongAnswer3.text = ""
+
+    -- if the random question number is 12, then ask question 
+    elseif (randomQuestionNumber == 12) then
+
+        -- make fist question visible
+        textQuestion.text = ""
+
+         -- make answers visible
+        correctAnswer.text = ""
+        wrongAnswer1.text = ""
+        wrongAnswer2.text = ""
+        wrongAnswer3.text = ""
+
+    -- if the random question number is 13, then ask question 
+    elseif (randomQuestionNumber == 13) then
+
+        -- make fist question visible
+        textQuestion.text = " "
+
+         -- make answers visible
+        correctAnswer.text = ""
+        wrongAnswer1.text = ""
+        wrongAnswer2.text = ""
+        wrongAnswer3.text = ""
+
+    -- if the random question number is 14, then ask question 
+    elseif (randomQuestionNumber == 14) then
+
+        -- make fist question visible
+        textQuestion.text = " "
+
+         -- make answers visible
+        correctAnswer.text = ""
+        wrongAnswer1.text = ""
+        wrongAnswer2.text = ""
+        wrongAnswer3.text = ""
+
+    -- if the random question number is 15, then ask question 
+    elseif (randomQuestionNumber == 15) then
+
+        -- make fist question visible
+        textQuestion.text = " "
+
+         -- make answers visible
+        correctAnswer.text = ""
+        wrongAnswer1.text = ""
+        wrongAnswer2.text = ""
+        wrongAnswer3.text = ""
+
+    -- if the random question number is 16, then ask question 
+    elseif (randomQuestionNumber == 16) then
+
+        -- make fist question visible
+        textQuestion.text = " "
+
+         -- make answers visible
+        correctAnswer.text = ""
+        wrongAnswer1.text = ""
+        wrongAnswer2.text = ""
+        wrongAnswer3.text = ""
+
+    -- if the random question number is 17, then ask question 
+    elseif (randomQuestionNumber == 17) then
+
+        -- make fist question visible
+        textQuestion.text = " "
+
+         -- make answers visible
+        correctAnswer.text = ""
+        wrongAnswer1.text = ""
+        wrongAnswer2.text = ""
+        wrongAnswer3.text = ""
+
+    -- if the random question number is 18, then ask question 
+    elseif (randomQuestionNumber == 18) then
+
+        -- make fist question visible
+        textQuestion.text = " "
+
+         -- make answers visible
+        correctAnswer.text = ""
+        wrongAnswer1.text = ""
+        wrongAnswer2.text = ""
+        wrongAnswer3.text = ""
+
+    -- if the random question number is 19, then ask question 
+    elseif (randomQuestionNumber == 19) then
+
+        -- make fist question visible
+        textQuestion.text = " "
+
+         -- make answers visible
+        correctAnswer.text = ""
+        wrongAnswer1.text = ""
+        wrongAnswer2.text = ""
+        wrongAnswer3.text = ""
+
+    -- if the random question number is 20, then ask question 
+    elseif (randomQuestionNumber == 20) then
+
+        -- make fist question visible
+        textQuestion.text = " "
+
+         -- make answers visible
+        correctAnswer.text = ""
+        wrongAnswer1.text = ""
+        wrongAnswer2.text = ""
+        wrongAnswer3.text = ""    
         
     end
 end
