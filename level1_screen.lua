@@ -331,8 +331,7 @@ local function AskQuestion()
         correctAnswer.text = "Milky Way"
         wrongAnswer1.text = "Millcky Way"
         wrongAnswer2.text = "Malcy Way"
-        wrongAnswer3.text = "Milkie Way
-"
+        wrongAnswer3.text = "Milkie Way"
 
     -- if the random question number is 20, then ask question 
     elseif (randomQuestionNumber == 20) then
