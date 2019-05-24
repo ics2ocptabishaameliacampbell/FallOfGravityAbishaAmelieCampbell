@@ -40,9 +40,6 @@ local unmuteButtton
 
 local randomQuestionNumber
 
--- displays the number correct that the user has
-local numberCorrectText 
-
 -- displays the number of lives the user has
 local livesText 
 
@@ -54,8 +51,6 @@ local correctAnswer
 local wrongAnswer1
 local wrongAnswer2
 local wrongAnswer3
-
-
 
 -- Boolean variable that states if user clicked the answer or not
 local alreadyClickedAnswer = false
@@ -76,7 +71,7 @@ local bkgSoundChannel
 
 -- Creating Transitioning Function back to main menu
 local function BackTransition( )
-    composer.gotoScene( "main_menu", {effect = "fade", time = 500})
+    composer.gotoScene( "main_menu", {effect = "fade", time = 200})
 end
 
 -----------------------------------------------------------------------------------------
@@ -108,9 +103,9 @@ end
 
 local function AskQuestion()
     -- randomly choose 1 out of the 20 questions
-    randomQuestionNumber = math.random(1,1)
+    randomQuestionNumber = math.random(1,7)
 
-    -- if the random question number is 1, then ask question 1
+    -- if the random question number is 1, then ask question 
     if (randomQuestionNumber == 1) then
 
         -- make fist question visible
@@ -121,6 +116,78 @@ local function AskQuestion()
         wrongAnswer1.text = "Plainets"
         wrongAnswer2.text = "Plenets"
         wrongAnswer3.text = "Planeits"
+
+    -- if the random question number is 2, then ask question 
+    elseif (randomQuestionNumber == 2) then
+
+        -- make fist question visible
+        textQuestion.text = "A person who travels to outerspace is called an ASTRONOT."
+
+         -- make answers visible
+        correctAnswer.text = "astronaut"
+        wrongAnswer1.text = "astronut"
+        wrongAnswer2.text = "astroneaut"
+        wrongAnswer3.text = "atsronaut"
+
+    -- if the random question number is 3, then ask question 
+    elseif (randomQuestionNumber == 3) then
+
+        -- make fist question visible
+        textQuestion.text = "The earth made one REVELUSHION around the sun."
+
+         -- make answers visible
+        correctAnswer.text = "  revolution "
+        wrongAnswer1.text = "  revallusion "
+        wrongAnswer2.text = "  reveolution "
+        wrongAnswer3.text = "  revalushyon "
+
+    -- if the random question number is 4, then ask question 
+    elseif (randomQuestionNumber == 4) then
+
+        -- make fist question visible
+        textQuestion.text = "The ATMASFERE layer closest to the earth."
+
+         -- make answers visible
+        correctAnswer.text = "    atmosphere  "
+        wrongAnswer1.text = "    atmosfeer  "
+        wrongAnswer2.text = "    atmosphear  "
+        wrongAnswer3.text = "    atmaspheare  "
+
+    -- if the random question number is 5, then ask question 
+    elseif (randomQuestionNumber == 5) then
+
+        -- make fist question visible
+        textQuestion.text = "A group of stars forming a recognizable pattern is a CONSTALATION. "
+
+         -- make answers visible
+        correctAnswer.text = "constellation"
+        wrongAnswer1.text = "constalasion"
+        wrongAnswer2.text = "conestalation"
+        wrongAnswer3.text = "constellasion"
+
+        -- if the random question number is 6, then ask question 
+    elseif (randomQuestionNumber == 6) then
+
+        -- make fist question visible
+        textQuestion.text = "A MITIOR flew across space."
+
+         -- make answers visible
+        correctAnswer.text = "meteor"
+        wrongAnswer1.text = "mitear"
+        wrongAnswer2.text = "metteor"
+        wrongAnswer3.text = "metoir"
+
+    -- if the random question number is 7, then ask question 
+    elseif (randomQuestionNumber == 7) then
+
+        -- make fist question visible
+        textQuestion.text = " An EXTRATARRESTRIEL is also known as a alien."
+
+         -- make answers visible
+        correctAnswer.text = "extraterrestrial"
+        wrongAnswer1.text = "extratarrastriael"
+        wrongAnswer2.text = "extraterestrail"
+        wrongAnswer3.text = "extratterestriall"
         
     end
 end
@@ -176,6 +243,29 @@ local function DisplayRandomAnswers()
     end
 end
 
+local function RestartScene()
+
+    alreadyClickedAnswer = false
+    correct.isVisible = false
+    incorrect.isVisible = false
+
+    livesText.text = "Number of lives = " .. tostring(lives)
+    numberCorrectText.text = "Number correct = " .. tostring(numberCorrect)
+
+    -- if they have 0 lives, go to the You Lose screen
+    if (lives == 0) then
+        -- go to you lose
+        composer.gotoScene("main_menu")
+    elseif (numberCorrect == 3) then
+        -- go to you win
+        composer.gotoScene("splash_screen")
+    else 
+        AskQuestion()
+        DisplayRandomAnswers()
+    end
+
+end
+
 -- Functions that checks if the buttons have been clicked.
 local function TouchListenerCorrectAnswer(touch)
     -- get the user answer from the text object that was clicked on
@@ -185,14 +275,12 @@ local function TouchListenerCorrectAnswer(touch)
 
         alreadyClickedAnswer = true
 
-        -- if the user gets the answer right, display Correct and call RestartSceneRight
-        if (correctAnswer == tonumber(userAnswer)) then     
-            correct.isVisible = true
-            -- increase the number correct by 1
-            numberCorrect = numberCorrect + 1
-            -- call RestartScene after 1 second
-            timer.performWithDelay( 1000, RestartScene )
-        end        
+        -- if the user gets the answer right, display Correct and call RestartSceneRight 
+        correct.isVisible = true
+        -- increase the number correct by 1
+        numberCorrect = numberCorrect + 1
+        -- call RestartScene after 1 second
+        timer.performWithDelay( 1000, RestartScene )      
 
     end
 end
@@ -206,14 +294,11 @@ local function TouchListenerWrongAnswer1(touch)
         alreadyClickedAnswer = true
 
 
-        if (wrongAnswer1 ~= tonumber(userAnswer)) then
-            incorrect.isVisible = true
-            -- decrease a life
-            lives = lives - 1
-            -- call RestartScene after 1 second
-            timer.performWithDelay( 1000, RestartScene )            
-        end        
-
+        incorrect.isVisible = true
+        -- decrease a life
+        lives = lives - 1
+        -- call RestartScene after 1 second
+        timer.performWithDelay( 1000, RestartScene )            
     end
 end
 
@@ -226,14 +311,11 @@ local function TouchListenerWrongAnswer2(touch)
         alreadyClickedAnswer = true
 
 
-        if (wrongAnswer2 ~= tonumber(userAnswer)) then
-            incorrect.isVisible = true
-            -- decrease a life
-            lives = lives - 1
-            -- call RestartScene after 1 second
-            timer.performWithDelay( 1000, RestartScene )            
-        end        
-
+        incorrect.isVisible = true
+        -- decrease a life
+        lives = lives - 1
+        -- call RestartScene after 1 second
+        timer.performWithDelay( 1000, RestartScene )            
     end
 end
 
@@ -245,15 +327,12 @@ local function TouchListenerWrongAnswer3(touch)
     if (touch.phase == "ended") and (alreadyClickedAnswer == false) then
 
         alreadyClickedAnswer = true
-
-
-        if (wrongAnswer3 ~= tonumber(userAnswer)) then
-            incorrect.isVisible = true
-            -- decrease a life
-            lives = lives - 1
-            -- call RestartScene after 1 second
-            timer.performWithDelay( 1000, RestartScene )            
-        end        
+        incorrect.isVisible = true
+        -- decrease a life
+        lives = lives - 1
+        -- call RestartScene after 1 second
+        timer.performWithDelay( 1000, RestartScene )            
+   
 
     end
 end
@@ -272,9 +351,9 @@ end
 local function RemoveTextObjectListeners()
 
     correctAnswer:removeEventListener("touch", TouchListenerCorrectAnswer)
-    q1WrongAnswer1:removeEventListener("touch", TouchListenerWrongAnswer1)
-    q1WrongAnswer2:removeEventListener("touch", TouchListenerWrongAnswer2)
-    q1WrongAnswer3:removeEventListener("touch", TouchListenerWrongAnswer3)
+    wrongAnswer1:removeEventListener("touch", TouchListenerWrongAnswer1)
+    wrongAnswer2:removeEventListener("touch", TouchListenerWrongAnswer2)
+    wrongAnswer3:removeEventListener("touch", TouchListenerWrongAnswer3)
 
 end
 
@@ -300,11 +379,8 @@ function scene:create( event )
     bkg_image.height = display.contentHeight
 
     -- Insert background image into the scene group in order to ONLY be associated with this scene
-    sceneGroup:insert( bkg_image ) 
+    
 
-
-    -- Send the background image to the back layer so all other objects can be on top
-    bkg_image:toBack()
 
     -----------------------------------------------------------------------------------------
     -- BUTTON WIDGETS
@@ -336,13 +412,13 @@ function scene:create( event )
 -- OBJECT CREATION
 -------------------------------------------------------------------------------
 -- create image object for mute and unmute buttons
-muteButton = display.newImageRect("Images/unmuteButtonPressedAmelieBo@2x .png", 100, 100)
-muteButton.x = display.contentWidth*1/10
+muteButton = display.newImageRect("Images/unmuteButtonPressedAmelieBo@2x .png", 60, 60)
+muteButton.x = display.contentWidth*0.8/10
 muteButton.y = display.contentHeight*9/10 
 muteButton.isVisible = true
 
-unmuteButton = display.newImageRect("Images/muteButtonUnpressedAmelieBo@2x .png", 100, 100)
-unmuteButton.x = display.contentWidth*1/10
+unmuteButton = display.newImageRect("Images/muteButtonUnpressedAmelieBo@2x .png", 60, 60)
+unmuteButton.x = display.contentWidth*0.8/10
 unmuteButton.y = display.contentHeight*9/10
 unmuteButton.isVisible = true
 
@@ -359,47 +435,53 @@ unmuteButton.isVisible = true
 
 
     -- display question 1
-    correctAnswer = display.newText( "", 600, 300, nil, 35)
+    correctAnswer = display.newText( "", 600, 300, nil, 40)
     -- set the color of the text to be white
     correctAnswer:setTextColor(1, 1, 1)
 
     -- display question 1
-    wrongAnswer1 = display.newText( "", 400, 235, nil, 35)
+    wrongAnswer1 = display.newText( "", 400, 235, nil, 40)
     -- set the color of the text to be white
     wrongAnswer1:setTextColor(1, 1, 1)
 
     -- display question 1
-    wrongAnswer2 = display.newText( "", 600, 235, nil, 35)
+    wrongAnswer2 = display.newText( "", 600, 235, nil, 40)
     -- set the color of the text to be white
     wrongAnswer2:setTextColor(1, 1, 1)
 
     -- display question 1
-    wrongAnswer3 = display.newText( "", 400, 300, nil, 35)
+    wrongAnswer3 = display.newText( "", 400, 300, nil, 40)
     -- set the color of the text to be white
     wrongAnswer3:setTextColor(1, 1, 1)
 
     -- create the text object that will say Correct, set the colour and then hide it
-    correct = display.newText("Correct", display.contentWidth/2, display.contentHeight*1/3, nil, 50 )
-    correct:setTextColor(100/255, 47/255, 210/255)
+    correct = display.newText("Correct", display.contentWidth/2, display.contentHeight/2, nil, 50 )
+    correct:setTextColor(51/255, 255/255, 51/255)
     correct.isVisible = false
 
     -- create the text object that will say Correct, set the colour and then hide it
-    incorrect = display.newText("Incorrect", display.contentWidth/2, display.contentHeight*1/3, nil, 50 )
+    incorrect = display.newText("Incorrect", display.contentWidth/2, display.contentHeight/2, nil, 50 )
     incorrect:setTextColor(242/255, 19/255, 19/255)
     incorrect.isVisible = false
 
      -- create the text object that will hold the number of lives
-    livesText = display.newText("", display.contentWidth*4/5, display.contentHeight*8/9, nil, 25) 
+    livesText = display.newText("Number of lives =", display.contentWidth*4/5, display.contentHeight*8/9, nil, 25) 
+    livesText:setTextColor(0, 0, 0)
+    livesText.isVisible = true
 
     -- create the text object that will hold the number of correct answers
-    numberCorrectText = display.newText("", display.contentWidth*4/5, display.contentHeight*6/7, nil, 25)
+    numberCorrectText = display.newText("Number correct =", display.contentWidth*4/5, display.contentHeight*6/7, nil, 25)
+    numberCorrectText:setTextColor(0, 0, 0)
+    numberCorrectText.isVisible = true
 -----------------------------------------------------------------------------------------
 
 
     -- Associating Buttons with this scene
+    sceneGroup:insert( bkg_image ) 
     sceneGroup:insert( backButton )
     sceneGroup:insert( muteButton )
     sceneGroup:insert( unmuteButton )
+    sceneGroup:insert( instructionsText )
     sceneGroup:insert( textQuestion)
     sceneGroup:insert( correctAnswer )
     sceneGroup:insert( wrongAnswer1 )
@@ -407,6 +489,8 @@ unmuteButton.isVisible = true
     sceneGroup:insert( wrongAnswer3 )
     sceneGroup:insert( correct )
     sceneGroup:insert( incorrect )
+    sceneGroup:insert( livesText )
+    sceneGroup:insert( numberCorrectText )
     
 end --function scene:create( event )
 
@@ -437,15 +521,14 @@ function scene:show( event )
         -- Example: start timers, begin animation, play audio, etc.
 
         -- initialize the number of lives and number correct 
-        lives = 2
+        lives = 3
         numberCorrect = 0
 
         -- start the main menu screen music
         bkgSoundChannel = audio.play( bkgSound, { channel=2, loops=-1} )
         muteButton:addEventListener( "touch", Mute)
         unmuteButton:addEventListener( "touch", Unmute)
-        AskQuestion()
-        DisplayRandomAnswers()
+        RestartScene()
         AddTextObjectListeners()
     end
 
