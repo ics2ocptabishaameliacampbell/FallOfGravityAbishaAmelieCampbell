@@ -109,7 +109,7 @@ local function AskQuestion()
     if (randomQuestionNumber == 1) then
 
         -- make fist question visible
-        textQuestion.text = "There are eight PLANITS\nin our solar system."
+        textQuestion.text = "There are eight PLANITS in our solar system."
 
          -- make answers visible
         correctAnswer.text = "Planets"
@@ -229,121 +229,122 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 11) then
 
         -- make fist question visible
-        textQuestion.text = ""
+        textQuestion.text = "A SATELIT is a small object that\norbits around a larger object."
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""
+        correctAnswer.text = "satellite "
+        wrongAnswer1.text = "satellight"
+        wrongAnswer2.text = "satlelite"
+        wrongAnswer3.text = "satlite"
 
     -- if the random question number is 12, then ask question 
     elseif (randomQuestionNumber == 12) then
 
         -- make fist question visible
-        textQuestion.text = ""
+        textQuestion.text = "A SOULTTIS is when the sun is farthest\nnorth or south from the equator."
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""
+        correctAnswer.text = "solstice"
+        wrongAnswer1.text = "solstisse"
+        wrongAnswer2.text = "soultice"
+        wrongAnswer3.text = "solestise"
 
     -- if the random question number is 13, then ask question 
     elseif (randomQuestionNumber == 13) then
 
         -- make fist question visible
-        textQuestion.text = " "
+        textQuestion.text = "SAETTURN has 62 moons. "
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""
+        correctAnswer.text = "Saturn"
+        wrongAnswer1.text = "Satourn"
+        wrongAnswer2.text = "Satorne"
+        wrongAnswer3.text = "Satturne"
 
     -- if the random question number is 14, then ask question 
     elseif (randomQuestionNumber == 14) then
 
         -- make fist question visible
-        textQuestion.text = " "
+        textQuestion.text = "PLUETTOE is the largest dwarf planet."
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""
+        correctAnswer.text = "Pluto"
+        wrongAnswer1.text = "Plueto"
+        wrongAnswer2.text = "Ploutoe"
+        wrongAnswer3.text = "Plotu"
 
     -- if the random question number is 15, then ask question 
     elseif (randomQuestionNumber == 15) then
 
         -- make fist question visible
-        textQuestion.text = " "
+        textQuestion.text = "One day on VENOSS is longer than one year."
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""
+        correctAnswer.text = "venus"
+        wrongAnswer1.text = "vienus"
+        wrongAnswer2.text = "vennis"
+        wrongAnswer3.text = "veinos"
 
     -- if the random question number is 16, then ask question 
     elseif (randomQuestionNumber == 16) then
 
         -- make fist question visible
-        textQuestion.text = " "
+        textQuestion.text = "The UENIVERSSE is everything we can touch, feel and sense. "
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""
+        correctAnswer.text = "universe"
+        wrongAnswer1.text = "unieverce"
+        wrongAnswer2.text = "unyvers"
+        wrongAnswer3.text = "universce"
 
     -- if the random question number is 17, then ask question 
     elseif (randomQuestionNumber == 17) then
 
         -- make fist question visible
-        textQuestion.text = " "
+        textQuestion.text = "CUMMITTS are found traveling throughout space."
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""
+        correctAnswer.text = "Comets"
+        wrongAnswer1.text = "Commits"
+        wrongAnswer2.text = "Cumits"
+        wrongAnswer3.text = "Commetts"
 
     -- if the random question number is 18, then ask question 
     elseif (randomQuestionNumber == 18) then
 
         -- make fist question visible
-        textQuestion.text = " "
+        textQuestion.text = "A NEBUELLA is an interstellar cloud of dust."
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""
+        correctAnswer.text = "nebula"
+        wrongAnswer1.text = "nebuela"
+        wrongAnswer2.text = "nibulla"
+        wrongAnswer3.text = "neboula"
 
     -- if the random question number is 19, then ask question 
     elseif (randomQuestionNumber == 19) then
 
         -- make fist question visible
-        textQuestion.text = " "
+        textQuestion.text = "The MELKY Way is our galaxy."
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""
+        correctAnswer.text = "Milky Way"
+        wrongAnswer1.text = "Millcky Way"
+        wrongAnswer2.text = "Malcy Way"
+        wrongAnswer3.text = "Milkie Way
+"
 
     -- if the random question number is 20, then ask question 
     elseif (randomQuestionNumber == 20) then
 
         -- make fist question visible
-        textQuestion.text = " "
+        textQuestion.text = "A GALASI is a system of millions or billions of stars."
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""    
+        correctAnswer.text = "galaxy"
+        wrongAnswer1.text = "galaxie"
+        wrongAnswer2.text = "gallaxie"
+        wrongAnswer3.text = "gallixy"    
         
     end
 end
