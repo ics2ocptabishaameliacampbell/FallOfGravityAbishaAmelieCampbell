@@ -109,7 +109,7 @@ local function AskQuestion()
     if (randomQuestionNumber == 1) then
 
         -- make fist question visible
-        textQuestion.text = "There are eight PLANITS in our solar system."
+        textQuestion.text = "There are eight PLANITS\nin our solar system."
 
          -- make answers visible
         correctAnswer.text = "Planets"
@@ -157,7 +157,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 5) then
 
         -- make fist question visible
-        textQuestion.text = "A group of stars forming a recognizable pattern is a CONSTALATION. "
+        textQuestion.text = "A group of stars forming a \n recognizable pattern is a CONSTALATION. "
 
          -- make answers visible
         correctAnswer.text = "constellation"
@@ -193,37 +193,37 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 8) then
 
         -- make fist question visible
-        textQuestion.text = " "
+        textQuestion.text = "An EICKLIPSE happens when one object in\nspace blocks another from view. "
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""
+        correctAnswer.text = "eclipse"
+        wrongAnswer1.text = "eklypse"
+        wrongAnswer2.text = "eclypsse"
+        wrongAnswer3.text = "ecllips"
 
     -- if the random question number is 9, then ask question 
     elseif (randomQuestionNumber == 9) then
 
         -- make fist question visible
-        textQuestion.text = ""
+        textQuestion.text = "An EICUINOX is when the sun is over the equator."
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""
+        correctAnswer.text = "equinox"
+        wrongAnswer1.text = "ekuinoks"
+        wrongAnswer2.text = "equinocks"
+        wrongAnswer3.text = "ecuinux"
 
     -- if the random question number is 10, then ask question 
     elseif (randomQuestionNumber == 10) then
 
         -- make fist question visible
-        textQuestion.text = " "
+        textQuestion.text = "Through space XPLORASION humans have learned a lot."
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""
+        correctAnswer.text = "space exploration"
+        wrongAnswer1.text = "spase explorashion"
+        wrongAnswer2.text = "space exploraietion"
+        wrongAnswer3.text = "space esplorration"
 
     -- if the random question number is 11, then ask question 
     elseif (randomQuestionNumber == 11) then
@@ -355,47 +355,47 @@ local function DisplayRandomAnswers()
 
     if (answerPosition == 1) then                
         
-        correctAnswer.x = 600
-        correctAnswer.y = 300      
-        wrongAnswer1.x = 400 
-        wrongAnswer1.y = 235
-        wrongAnswer2.x = 600 
-        wrongAnswer2.y = 235
-        wrongAnswer3.x = 400 
-        wrongAnswer3.y = 300
+        correctAnswer.x = 700
+        correctAnswer.y = 350      
+        wrongAnswer1.x = 300 
+        wrongAnswer1.y = 285
+        wrongAnswer2.x = 700 
+        wrongAnswer2.y = 285
+        wrongAnswer3.x = 300 
+        wrongAnswer3.y = 350
 
     elseif (answerPosition == 2) then
        
-        correctAnswer.x = 400 
-        correctAnswer.y = 300      
-        wrongAnswer1.x = 600
-        wrongAnswer1.y = 300
-        wrongAnswer2.x = 400
-        wrongAnswer2.y = 235
-        wrongAnswer3.x = 600
-        wrongAnswer3.y = 235
+        correctAnswer.x = 300 
+        correctAnswer.y = 350      
+        wrongAnswer1.x = 700
+        wrongAnswer1.y = 350
+        wrongAnswer2.x = 300
+        wrongAnswer2.y = 285
+        wrongAnswer3.x = 700
+        wrongAnswer3.y = 285
 
     elseif (answerPosition == 3) then
        
-        correctAnswer.x = 600    
-        correctAnswer.y = 235   
-        wrongAnswer1.x = 400
-        wrongAnswer1.y = 300
-        wrongAnswer2.x = 600
-        wrongAnswer2.y = 300
-        wrongAnswer3.x = 400
-        wrongAnswer3.y = 235
+        correctAnswer.x = 700    
+        correctAnswer.y = 285   
+        wrongAnswer1.x = 300
+        wrongAnswer1.y = 350
+        wrongAnswer2.x = 700
+        wrongAnswer2.y = 350
+        wrongAnswer3.x = 300
+        wrongAnswer3.y = 285
 
     else 
        
-        correctAnswer.x = 400  
-        correctAnswer.y = 235    
-        wrongAnswer1.x = 600
-        wrongAnswer1.y = 235
-        wrongAnswer2.x = 400
-        wrongAnswer2.y = 300
-        wrongAnswer3.x = 600
-        wrongAnswer3.y = 300
+        correctAnswer.x = 300  
+        correctAnswer.y = 285    
+        wrongAnswer1.x = 700
+        wrongAnswer1.y = 285
+        wrongAnswer2.x = 300
+        wrongAnswer2.y = 350
+        wrongAnswer3.x = 700
+        wrongAnswer3.y = 350
     end
 end
 
@@ -591,22 +591,22 @@ unmuteButton.isVisible = true
 
 
     -- display question 1
-    correctAnswer = display.newText( "", 600, 300, nil, 40)
+    correctAnswer = display.newText( "", 700, 350, nil, 40)
     -- set the color of the text to be white
     correctAnswer:setTextColor(1, 1, 1)
 
     -- display question 1
-    wrongAnswer1 = display.newText( "", 400, 235, nil, 40)
+    wrongAnswer1 = display.newText( "", 300, 285, nil, 40)
     -- set the color of the text to be white
     wrongAnswer1:setTextColor(1, 1, 1)
 
     -- display question 1
-    wrongAnswer2 = display.newText( "", 600, 235, nil, 40)
+    wrongAnswer2 = display.newText( "", 700, 285, nil, 40)
     -- set the color of the text to be white
     wrongAnswer2:setTextColor(1, 1, 1)
 
     -- display question 1
-    wrongAnswer3 = display.newText( "", 400, 300, nil, 40)
+    wrongAnswer3 = display.newText( "", 300, 350, nil, 40)
     -- set the color of the text to be white
     wrongAnswer3:setTextColor(1, 1, 1)
 
