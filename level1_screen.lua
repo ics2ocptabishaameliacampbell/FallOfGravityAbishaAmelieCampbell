@@ -121,7 +121,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 2) then
 
         -- make fist question visible
-        textQuestion.text = "A person who travels to outerspace is called an ASTRONOT."
+        textQuestion.text = "A person who travels to outerspace is called an\nASTRONOT."
 
          -- make answers visible
         correctAnswer.text = "astronaut"
@@ -217,7 +217,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 10) then
 
         -- make fist question visible
-        textQuestion.text = "Through space XPLORASION humans have learned a lot."
+        textQuestion.text = "Through space XPLORASION humans have learned\na lot."
 
          -- make answers visible
         correctAnswer.text = "space exploration"
@@ -289,7 +289,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 16) then
 
         -- make fist question visible
-        textQuestion.text = "The UENIVERSSE is everything we can touch, feel and sense. "
+        textQuestion.text = "The UENIVERSSE is everything we can\ntouch, feel and sense. "
 
          -- make answers visible
         correctAnswer.text = "universe"
@@ -337,7 +337,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 20) then
 
         -- make fist question visible
-        textQuestion.text = "A GALASI is a system of millions or billions of stars."
+        textQuestion.text = "A GALASI is a system of millions or billions\nof stars."
 
          -- make answers visible
         correctAnswer.text = "galaxy"
