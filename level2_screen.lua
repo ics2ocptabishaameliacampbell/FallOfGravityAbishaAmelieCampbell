@@ -235,7 +235,7 @@ local function AskQuestion()
         correctAnswer.text = "cuisinier"
         wrongAnswer1.text = "infirmière"
         wrongAnswer2.text = "employé"
-        wrongAnswer3.text = ""
+        wrongAnswer3.text = "prof"
 
     -- if the random question number is 12, then ask question 
     elseif (randomQuestionNumber == 12) then
