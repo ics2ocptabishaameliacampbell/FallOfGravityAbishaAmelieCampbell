@@ -121,43 +121,43 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 2) then
 
         -- make fist question visible
-        textQuestion.text = "A person who travels to outerspace is called an ASTRONOT."
+        textQuestion.text = "What is 'sleeping' in french."
 
          -- make answers visible
-        correctAnswer.text = "astronaut"
-        wrongAnswer1.text = "astronut"
-        wrongAnswer2.text = "astroneaut"
-        wrongAnswer3.text = "atsronaut"
+        correctAnswer.text = "dormir"
+        wrongAnswer1.text = "chanter"
+        wrongAnswer2.text = "devoirs"
+        wrongAnswer3.text = "dancer"
 
     -- if the random question number is 3, then ask question 
     elseif (randomQuestionNumber == 3) then
 
         -- make fist question visible
-        textQuestion.text = "The earth made one REVELUSHION around the sun."
+        textQuestion.text = "What is 'nice' in french."
 
          -- make answers visible
-        correctAnswer.text = "  revolution "
-        wrongAnswer1.text = "  revallusion "
-        wrongAnswer2.text = "  reveolution "
-        wrongAnswer3.text = "  revalushyon "
+        correctAnswer.text = "gentil"
+        wrongAnswer1.text = "mal"
+        wrongAnswer2.text = "chanceux"
+        wrongAnswer3.text = "triste"
 
     -- if the random question number is 4, then ask question 
     elseif (randomQuestionNumber == 4) then
 
         -- make fist question visible
-        textQuestion.text = "The ATMASFERE layer closest to the earth."
+        textQuestion.text = "What is 'flower' in french."
 
          -- make answers visible
-        correctAnswer.text = "    atmosphere  "
-        wrongAnswer1.text = "    atmosfeer  "
-        wrongAnswer2.text = "    atmosphear  "
-        wrongAnswer3.text = "    atmaspheare  "
+        correctAnswer.text = "fleur"
+        wrongAnswer1.text = "fatigue"
+        wrongAnswer2.text = "plante"
+        wrongAnswer3.text = "arbre"
 
     -- if the random question number is 5, then ask question 
     elseif (randomQuestionNumber == 5) then
 
         -- make fist question visible
-        textQuestion.text = "What is whiteboard in french?. "
+        textQuestion.text = "What is 'whiteboard' in french?. "
 
          -- make answers visible
         correctAnswer.text = "tableu blanc"
@@ -169,7 +169,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 6) then
 
         -- make fist question visible
-        textQuestion.text = "What is lemon in french?."
+        textQuestion.text = "What is 'lemon' in french?."
 
          -- make answers visible
         correctAnswer.text = "citron"
@@ -181,169 +181,169 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 7) then
 
         -- make fist question visible
-        textQuestion.text = " An EXTRATARRESTRIEL is also known as a alien."
+        textQuestion.text = " What is 'calendar' in french."
 
          -- make answers visible
-        correctAnswer.text = "extraterrestrial"
-        wrongAnswer1.text = "extratarrastriael"
-        wrongAnswer2.text = "extraterestrail"
-        wrongAnswer3.text = "extratterestriall"
+        correctAnswer.text = "calendrier"
+        wrongAnswer1.text = "celebrite"
+        wrongAnswer2.text = "chercher"
+        wrongAnswer3.text = "chanter"
 
     -- if the random question number is 8, then ask question 
     elseif (randomQuestionNumber == 8) then
 
         -- make fist question visible
-        textQuestion.text = "An EICKLIPSE happens when one object in\nspace blocks another from view. "
+        textQuestion.text = "What is 'look' in french. "
 
          -- make answers visible
-        correctAnswer.text = "eclipse"
-        wrongAnswer1.text = "eklypse"
-        wrongAnswer2.text = "eclypsse"
-        wrongAnswer3.text = "ecllips"
+        correctAnswer.text = "regardez"
+        wrongAnswer1.text = "laisser"
+        wrongAnswer2.text = "parler"
+        wrongAnswer3.text = "tenir"
 
     -- if the random question number is 9, then ask question 
     elseif (randomQuestionNumber == 9) then
 
         -- make fist question visible
-        textQuestion.text = "An EICUINOX is when the sun is over the equator."
+        textQuestion.text = "What is 'chickcen' in french."
 
          -- make answers visible
-        correctAnswer.text = "equinox"
-        wrongAnswer1.text = "ekuinoks"
-        wrongAnswer2.text = "equinocks"
-        wrongAnswer3.text = "ecuinux"
+        correctAnswer.text = "poulet"
+        wrongAnswer1.text = "boeuf"
+        wrongAnswer2.text = "porc"
+        wrongAnswer3.text = "agneau"
 
     -- if the random question number is 10, then ask question 
     elseif (randomQuestionNumber == 10) then
 
         -- make fist question visible
-        textQuestion.text = "Through space XPLORASION humans have learned a lot."
+        textQuestion.text = "What is 'head' in french."
 
          -- make answers visible
-        correctAnswer.text = "space exploration"
-        wrongAnswer1.text = "spase explorashion"
-        wrongAnswer2.text = "space exploraietion"
-        wrongAnswer3.text = "space esplorration"
+        correctAnswer.text = "tete"
+        wrongAnswer1.text = "bras"
+        wrongAnswer2.text = "main"
+        wrongAnswer3.text = "doigt"
 
     -- if the random question number is 11, then ask question 
     elseif (randomQuestionNumber == 11) then
 
         -- make fist question visible
-        textQuestion.text = ""
+        textQuestion.text = "What is 'a cook' in french."
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""
+        correctAnswer.text = "cuisinier"
+        wrongAnswer1.text = "infirmière"
+        wrongAnswer2.text = "employé"
+        wrongAnswer3.text = "prof"
 
     -- if the random question number is 12, then ask question 
     elseif (randomQuestionNumber == 12) then
 
         -- make fist question visible
-        textQuestion.text = ""
+        textQuestion.text = "What is 'June' in french."
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""
+        correctAnswer.text = "juin"
+        wrongAnswer1.text = "juillet"
+        wrongAnswer2.text = "août"
+        wrongAnswer3.text = "février"
 
     -- if the random question number is 13, then ask question 
     elseif (randomQuestionNumber == 13) then
 
         -- make fist question visible
-        textQuestion.text = " "
+        textQuestion.text = " What is 'four' in french."
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""
+        correctAnswer.text = "quatre"
+        wrongAnswer1.text = "cinq"
+        wrongAnswer2.text = "deux"
+        wrongAnswer3.text = "huit"
 
     -- if the random question number is 14, then ask question 
     elseif (randomQuestionNumber == 14) then
 
         -- make fist question visible
-        textQuestion.text = " "
-
+        textQuestion.text = " What is 'Goodbye' in french."
+       
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""
+        correctAnswer.text = "au revoir"
+        wrongAnswer1.text = "bonjour"
+        wrongAnswer2.text = "délicieux"
+        wrongAnswer3.text = "merci"
 
     -- if the random question number is 15, then ask question 
     elseif (randomQuestionNumber == 15) then
 
         -- make fist question visible
-        textQuestion.text = " "
+        textQuestion.text = " What is 'Wednesday' in french."
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""
+        correctAnswer.text = "mercredi"
+        wrongAnswer1.text = "mari"
+        wrongAnswer2.text = "dimanche"
+        wrongAnswer3.text = "vendredi"
 
     -- if the random question number is 16, then ask question 
     elseif (randomQuestionNumber == 16) then
 
         -- make fist question visible
-        textQuestion.text = " "
+        textQuestion.text = " What is 'snow' in french."
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""
+        correctAnswer.text = "neige "
+        wrongAnswer1.text = "nager"
+        wrongAnswer2.text = "eau"
+        wrongAnswer3.text = "nourriture"
 
     -- if the random question number is 17, then ask question 
     elseif (randomQuestionNumber == 17) then
 
         -- make fist question visible
-        textQuestion.text = " "
+        textQuestion.text = "What is 'bread' in french. "
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""
+        correctAnswer.text = "pain"
+        wrongAnswer1.text = " mais"
+        wrongAnswer2.text = "oeuf"
+        wrongAnswer3.text = "celeri"
 
     -- if the random question number is 18, then ask question 
     elseif (randomQuestionNumber == 18) then
 
         -- make fist question visible
-        textQuestion.text = " "
+        textQuestion.text = "What is 'apple' in french. "
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""
+        correctAnswer.text = "pomme"
+        wrongAnswer1.text = "carotte"
+        wrongAnswer2.text = "poir"
+        wrongAnswer3.text = "cerises"
 
     -- if the random question number is 19, then ask question 
     elseif (randomQuestionNumber == 19) then
 
         -- make fist question visible
-        textQuestion.text = " "
+        textQuestion.text = "What is 'grass' in french."
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""
+        correctAnswer.text = "herbe"
+        wrongAnswer1.text = "hiver"
+        wrongAnswer2.text = "nerve"
+        wrongAnswer3.text = "serve"
 
     -- if the random question number is 20, then ask question 
     elseif (randomQuestionNumber == 20) then
 
         -- make fist question visible
-        textQuestion.text = " "
+        textQuestion.text = " What is 'sky' in french."
 
          -- make answers visible
-        correctAnswer.text = ""
-        wrongAnswer1.text = ""
-        wrongAnswer2.text = ""
-        wrongAnswer3.text = ""    
+        correctAnswer.text = "ciel"
+        wrongAnswer1.text = "miel"
+        wrongAnswer2.text = "fiel"
+        wrongAnswer3.text = "céréale"    
         
     end
 end

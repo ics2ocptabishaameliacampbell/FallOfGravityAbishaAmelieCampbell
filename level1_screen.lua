@@ -181,13 +181,13 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 7) then
 
         -- make fist question visible
-        textQuestion.text = " An EXTRATARRESTRIEL is also known as a alien."
+        textQuestion.text = "We live on planet ERF."
 
          -- make answers visible
-        correctAnswer.text = "extraterrestrial"
-        wrongAnswer1.text = "extratarrastriael"
-        wrongAnswer2.text = "extraterestrail"
-        wrongAnswer3.text = "extratterestriall"
+        correctAnswer.text = "earth"
+        wrongAnswer1.text = "erath"
+        wrongAnswer2.text = "erth"
+        wrongAnswer3.text = "earf"
 
     -- if the random question number is 8, then ask question 
     elseif (randomQuestionNumber == 8) then
