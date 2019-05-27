@@ -17,7 +17,7 @@ local widget = require( "widget" )
 -----------------------------------------------------------------------------------------
 
 -- Naming Scene
-sceneName = "level1_screen"
+sceneName = "level3_screen"
 
 -----------------------------------------------------------------------------------------
 -- Creating Scene Object
@@ -121,229 +121,229 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 2) then
 
         -- make fist question visible
-        textQuestion.text = "A person who travels to outerspace is called an ASTRONOT."
+        textQuestion.text = "What planet is closest to the sun?"
 
          -- make answers visible
-        correctAnswer.text = "astronaut"
-        wrongAnswer1.text = "astronut"
-        wrongAnswer2.text = "astroneaut"
-        wrongAnswer3.text = "atsronaut"
+        correctAnswer.text = "Mercury"
+        wrongAnswer1.text = "Mars"
+        wrongAnswer2.text = "Jupiter"
+        wrongAnswer3.text = "Earth"
 
     -- if the random question number is 3, then ask question 
     elseif (randomQuestionNumber == 3) then
 
         -- make fist question visible
-        textQuestion.text = "The earth made one REVELUSHION around the sun."
+        textQuestion.text = "How many planets are in our solar system?"
 
          -- make answers visible
-        correctAnswer.text = "  revolution "
-        wrongAnswer1.text = "  revallusion "
-        wrongAnswer2.text = "  reveolution "
-        wrongAnswer3.text = "  revalushyon "
+        correctAnswer.text = "  8 "
+        wrongAnswer1.text = "  9 "
+        wrongAnswer2.text = "  10 "
+        wrongAnswer3.text = "  12 "
 
     -- if the random question number is 4, then ask question 
     elseif (randomQuestionNumber == 4) then
 
         -- make fist question visible
-        textQuestion.text = "The ATMASFERE layer closest to the earth."
+        textQuestion.text = "Which planet is known as “The red planet”?"
 
          -- make answers visible
-        correctAnswer.text = "    atmosphere  "
-        wrongAnswer1.text = "    atmosfeer  "
-        wrongAnswer2.text = "    atmosphear  "
-        wrongAnswer3.text = "    atmaspheare  "
+        correctAnswer.text = "    Mars  "
+        wrongAnswer1.text = "    Jupiter  "
+        wrongAnswer2.text = "    Earth  "
+        wrongAnswer3.text = "    Neptune  "
 
     -- if the random question number is 5, then ask question 
     elseif (randomQuestionNumber == 5) then
 
         -- make fist question visible
-        textQuestion.text = "A group of stars forming a \n recognizable pattern is a CONSTALATION. "
+        textQuestion.text = "Which planet are we on?"
 
          -- make answers visible
-        correctAnswer.text = "constellation"
-        wrongAnswer1.text = "constalasion"
-        wrongAnswer2.text = "conestalation"
-        wrongAnswer3.text = "constellasion"
+        correctAnswer.text = "Earth"
+        wrongAnswer1.text = "Saturn"
+        wrongAnswer2.text = "Mercury"
+        wrongAnswer3.text = "Mars"
 
         -- if the random question number is 6, then ask question 
     elseif (randomQuestionNumber == 6) then
 
         -- make fist question visible
-        textQuestion.text = "A MITIOR flew across space."
+        textQuestion.text = "What planet is most famous for its ring?"
 
          -- make answers visible
-        correctAnswer.text = "meteor"
-        wrongAnswer1.text = "mitear"
-        wrongAnswer2.text = "metteor"
-        wrongAnswer3.text = "metoir"
+        correctAnswer.text = "Saturn"
+        wrongAnswer1.text = "Mercury"
+        wrongAnswer2.text = "Jupiter"
+        wrongAnswer3.text = "Uranus"
 
     -- if the random question number is 7, then ask question 
     elseif (randomQuestionNumber == 7) then
 
         -- make fist question visible
-        textQuestion.text = " An EXTRATARRESTRIEL is also known as a alien."
+        textQuestion.text = " What is the star in our solar system called?"
 
          -- make answers visible
-        correctAnswer.text = "extraterrestrial"
-        wrongAnswer1.text = "extratarrastriael"
-        wrongAnswer2.text = "extraterestrail"
-        wrongAnswer3.text = "extratterestriall"
+        correctAnswer.text = "The Sun"
+        wrongAnswer1.text = "Red Giant"
+        wrongAnswer2.text = "Star"
+        wrongAnswer3.text = "Meteor"
 
     -- if the random question number is 8, then ask question 
     elseif (randomQuestionNumber == 8) then
 
         -- make fist question visible
-        textQuestion.text = "An EICKLIPSE happens when one object in\nspace blocks another from view. "
+        textQuestion.text = "What is the biggest planet in our solar system?"
 
          -- make answers visible
-        correctAnswer.text = "eclipse"
-        wrongAnswer1.text = "eklypse"
-        wrongAnswer2.text = "eclypsse"
-        wrongAnswer3.text = "ecllips"
+        correctAnswer.text = "Jupiter"
+        wrongAnswer1.text = "Saturn"
+        wrongAnswer2.text = "Earth"
+        wrongAnswer3.text = "Venus"
 
     -- if the random question number is 9, then ask question 
     elseif (randomQuestionNumber == 9) then
 
         -- make fist question visible
-        textQuestion.text = "An EICUINOX is when the sun is over the equator."
+        textQuestion.text = "What planet is closest to the sun?"
 
          -- make answers visible
-        correctAnswer.text = "equinox"
-        wrongAnswer1.text = "ekuinoks"
-        wrongAnswer2.text = "equinocks"
-        wrongAnswer3.text = "ecuinux"
+        correctAnswer.text = "Mercury"
+        wrongAnswer1.text = "Mars"
+        wrongAnswer2.text = "Jupiter"
+        wrongAnswer3.text = "Earth"
 
     -- if the random question number is 10, then ask question 
     elseif (randomQuestionNumber == 10) then
 
         -- make fist question visible
-        textQuestion.text = "Through space XPLORASION humans have learned a lot."
+        textQuestion.text = "How many moons does saturn have?"
 
          -- make answers visible
-        correctAnswer.text = "space exploration"
-        wrongAnswer1.text = "spase explorashion"
-        wrongAnswer2.text = "space exploraietion"
-        wrongAnswer3.text = "space esplorration"
+        correctAnswer.text = "62"
+        wrongAnswer1.text = "1"
+        wrongAnswer2.text = "3"
+        wrongAnswer3.text = "510"
 
     -- if the random question number is 11, then ask question 
     elseif (randomQuestionNumber == 11) then
 
         -- make fist question visible
-        textQuestion.text = "A SATELIT is a small object that\norbits around a larger object."
+        textQuestion.text = "What is our galaxy called?"
 
          -- make answers visible
-        correctAnswer.text = "satellite "
-        wrongAnswer1.text = "satellight"
-        wrongAnswer2.text = "satlelite"
-        wrongAnswer3.text = "satlite"
+        correctAnswer.text = "The Milky Way "
+        wrongAnswer1.text = "The Starry Galaxy"
+        wrongAnswer2.text = "Galaxy Studios"
+        wrongAnswer3.text = "The Ice Cream Way"
 
     -- if the random question number is 12, then ask question 
     elseif (randomQuestionNumber == 12) then
 
         -- make fist question visible
-        textQuestion.text = "A SOULTTIS is when the sun is farthest\nnorth or south from the equator."
+        textQuestion.text = " What is another word for alien?"
 
          -- make answers visible
-        correctAnswer.text = "solstice"
-        wrongAnswer1.text = "solstisse"
-        wrongAnswer2.text = "soultice"
-        wrongAnswer3.text = "solestise"
+        correctAnswer.text = "extraterrestrial "
+        wrongAnswer1.text = "monster"
+        wrongAnswer2.text = "space invader"
+        wrongAnswer3.text = "teranisaurus rex"
 
     -- if the random question number is 13, then ask question 
     elseif (randomQuestionNumber == 13) then
 
         -- make fist question visible
-        textQuestion.text = "SAETTURN has 62 moons. "
+        textQuestion.text = "What planet is blue"
 
          -- make answers visible
-        correctAnswer.text = "Saturn"
-        wrongAnswer1.text = "Satourn"
-        wrongAnswer2.text = "Satorne"
-        wrongAnswer3.text = "Satturne"
+        correctAnswer.text = "Uranus"
+        wrongAnswer1.text = "Saturn"
+        wrongAnswer2.text = "Earth"
+        wrongAnswer3.text = "Pluto"
 
     -- if the random question number is 14, then ask question 
     elseif (randomQuestionNumber == 14) then
 
         -- make fist question visible
-        textQuestion.text = "PLUETTOE is the largest dwarf planet."
+        textQuestion.text = "How long does it take the earth to do one revolution of the sun?"
 
          -- make answers visible
-        correctAnswer.text = "Pluto"
-        wrongAnswer1.text = "Plueto"
-        wrongAnswer2.text = "Ploutoe"
-        wrongAnswer3.text = "Plotu"
+        correctAnswer.text = "365 Days"
+        wrongAnswer1.text = "56 Days"
+        wrongAnswer2.text = "1 Day"
+        wrongAnswer3.text = "2 Days"
 
     -- if the random question number is 15, then ask question 
     elseif (randomQuestionNumber == 15) then
 
         -- make fist question visible
-        textQuestion.text = "One day on VENOSS is longer than one year."
+        textQuestion.text = "What planet is the furthest from the sun?"
 
          -- make answers visible
-        correctAnswer.text = "venus"
-        wrongAnswer1.text = "vienus"
-        wrongAnswer2.text = "vennis"
-        wrongAnswer3.text = "veinos"
+        correctAnswer.text = "Neptune"
+        wrongAnswer1.text = "Venus"
+        wrongAnswer2.text = "Saturn"
+        wrongAnswer3.text = "Uranus"
 
     -- if the random question number is 16, then ask question 
     elseif (randomQuestionNumber == 16) then
 
         -- make fist question visible
-        textQuestion.text = "The UENIVERSSE is everything we can touch, feel and sense. "
+        textQuestion.text = "Who was the first person to walk on the moon?"
 
          -- make answers visible
-        correctAnswer.text = "universe"
-        wrongAnswer1.text = "unieverce"
-        wrongAnswer2.text = "unyvers"
-        wrongAnswer3.text = "universce"
+        correctAnswer.text = "Neil Armstrong"
+        wrongAnswer1.text = "Buzz Aldrin"
+        wrongAnswer2.text = "Chris Hadfield"
+        wrongAnswer3.text = "Yuri Gagarin"
 
     -- if the random question number is 17, then ask question 
     elseif (randomQuestionNumber == 17) then
 
         -- make fist question visible
-        textQuestion.text = "CUMMITTS are found traveling throughout space."
+        textQuestion.text = "What is the name of the force holding us to the Earth?"
 
          -- make answers visible
-        correctAnswer.text = "Comets"
-        wrongAnswer1.text = "Commits"
-        wrongAnswer2.text = "Cumits"
-        wrongAnswer3.text = "Commetts"
+        correctAnswer.text = "Gravity"
+        wrongAnswer1.text = "The Force"
+        wrongAnswer2.text = "Earth"
+        wrongAnswer3.text = "Ground"
 
     -- if the random question number is 18, then ask question 
     elseif (randomQuestionNumber == 18) then
 
         -- make fist question visible
-        textQuestion.text = "A NEBUELLA is an interstellar cloud of dust."
+        textQuestion.text = "What is the biggest planet in our solar system?"
 
          -- make answers visible
-        correctAnswer.text = "nebula"
-        wrongAnswer1.text = "nebuela"
-        wrongAnswer2.text = "nibulla"
-        wrongAnswer3.text = "neboula"
+        correctAnswer.text = "Jupiter"
+        wrongAnswer1.text = "Neptune"
+        wrongAnswer2.text = "Uranus"
+        wrongAnswer3.text = "Saturn"
 
     -- if the random question number is 19, then ask question 
     elseif (randomQuestionNumber == 19) then
 
         -- make fist question visible
-        textQuestion.text = "The MELKY Way is our galaxy."
+        textQuestion.text = "What is the smallest planet in our solar system?"
 
          -- make answers visible
-        correctAnswer.text = "Milky Way"
-        wrongAnswer1.text = "Millcky Way"
-        wrongAnswer2.text = "Malcy Way"
-        wrongAnswer3.text = "Milkie Way"
+        correctAnswer.text = "Mercury"
+        wrongAnswer1.text = "Pluto"
+        wrongAnswer2.text = "Moon"
+        wrongAnswer3.text = "Mars"
 
     -- if the random question number is 20, then ask question 
     elseif (randomQuestionNumber == 20) then
 
         -- make fist question visible
-        textQuestion.text = "A GALASI is a system of millions or billions of stars."
+        textQuestion.text = "What does  ISS stand for?"
 
          -- make answers visible
-        correctAnswer.text = "galaxy"
-        wrongAnswer1.text = "galaxie"
-        wrongAnswer2.text = "gallaxie"
-        wrongAnswer3.text = "gallixy"    
+        correctAnswer.text = "International Space Station"
+        wrongAnswer1.text = "International States Science"
+        wrongAnswer2.text = "Inexplicable Science Sector"
+        wrongAnswer3.text = "International Space School"    
         
     end
 end
@@ -528,7 +528,7 @@ function scene:create( event )
     -----------------------------------------------------------------------------------------
 
     -- Insert the background image
-    bkg_image = display.newImageRect("Images/Level1ScreenAmelieBOAbishaJ@2x.png", display.contentWidth, display.contentHeight)
+    bkg_image = display.newImageRect("Images/Level3ScreenYourName@2x.png", display.contentWidth, display.contentHeight)
     bkg_image.x = display.contentCenterX
     bkg_image.y = display.contentCenterY
     bkg_image.width = display.contentWidth
@@ -580,7 +580,7 @@ unmuteButton.isVisible = true
 
 -----------------------------------------------------------------------------------------
    -- display question 1
-    instructionsText = display.newText( "Level 1- Click on the correct spelling", 515, 70, nil, 40)
+    instructionsText = display.newText( "Level 3- Click on the correct answer", 515, 70, nil, 40)
     -- set the color of the text to be white
     instructionsText:setTextColor(1, 1, 1)
 

@@ -65,6 +65,9 @@ local function Level2ScreenTransition( )
     composer.gotoScene( "level2_screen", {effect = "fade", time = 200})
 end    
 
+local function Level3ScreenTransition( )
+    composer.gotoScene( "level3_screen", {effect = "fade", time = 200})
+end    
 -----------------------------------------------------------------------------------------
     local function Mute(touch)
      if (touch.phase == "ended") then
@@ -196,7 +199,7 @@ function scene:create( event )
             overFile = "Images/Level3ButtonPressedAmelie@2x.png",
 
             -- When the button is released, call the Level1 screen transition function
-            onRelease = Level1ScreenTransition          
+            onRelease = Level3ScreenTransition          
         } )
 
 -------------------------------------------------------------------------------
