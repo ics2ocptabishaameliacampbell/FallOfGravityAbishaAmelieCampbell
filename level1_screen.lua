@@ -234,7 +234,7 @@ local function AskQuestion()
          -- make answers visible
         correctAnswer.text = "satellite "
         wrongAnswer1.text = "satellight"
-        wrongAnswer2.text = "satlelite"
+        wrongAnswer2.text = "satlelitte"
         wrongAnswer3.text = "satlite"
 
     -- if the random question number is 12, then ask question 
@@ -629,6 +629,11 @@ unmuteButton.isVisible = true
     numberCorrectText = display.newText("Number correct =", display.contentWidth*4/5, display.contentHeight*6/7, nil, 25)
     numberCorrectText:setTextColor(0, 0, 0)
     numberCorrectText.isVisible = true
+
+    -- create character
+    character = display.newImageRect("Images/AlexAbishaJ@2x.png", 100, 150)
+    character.x = display.contentWidth/4
+    character.y = display.contentHeight/1.2
 -----------------------------------------------------------------------------------------
 
 
@@ -647,6 +652,7 @@ unmuteButton.isVisible = true
     sceneGroup:insert( incorrect )
     sceneGroup:insert( livesText )
     sceneGroup:insert( numberCorrectText )
+    sceneGroup:insert( character )
     
 end --function scene:create( event )
 
