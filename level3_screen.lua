@@ -414,7 +414,7 @@ local function RestartScene()
         composer.gotoScene("you_lose")
     elseif (numberCorrect == 3) then
         -- go to you win
-        composer.gotoScene("you_win")
+        composer.gotoScene("you_win_level3")
     else 
         AskQuestion()
         DisplayRandomAnswers()
