@@ -62,7 +62,7 @@ local numberCorrectText
 -- SOUNDS
 -----------------------------------------------------------------------------------------
 -- create sound variables
-local bkgSound = audio.loadSound ( "Sounds/bkgLevel1.mp3" ) -- Setting variable to mp3 file
+local bkgSound = audio.loadSound ( "Sounds/credits.mp3" ) -- Setting variable to mp3 file
 local bkgSoundChannel
 
 -----------------------------------------------------------------------------------------
