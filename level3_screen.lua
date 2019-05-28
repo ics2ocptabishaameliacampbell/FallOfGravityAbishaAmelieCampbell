@@ -109,13 +109,13 @@ local function AskQuestion()
     if (randomQuestionNumber == 1) then
 
         -- make fist question visible
-        textQuestion.text = "There are eight PLANITS in our solar system."
+        textQuestion.text = "How many people have been on the moon?"
 
          -- make answers visible
-        correctAnswer.text = "Planets"
-        wrongAnswer1.text = "Plainets"
-        wrongAnswer2.text = "Plenets"
-        wrongAnswer3.text = "Planeits"
+        correctAnswer.text = "12"
+        wrongAnswer1.text = "10"
+        wrongAnswer2.text = "5"
+        wrongAnswer3.text = "3"
 
     -- if the random question number is 2, then ask question 
     elseif (randomQuestionNumber == 2) then
