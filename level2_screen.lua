@@ -411,10 +411,10 @@ local function RestartScene()
     -- if they have 0 lives, go to the You Lose screen
     if (lives == 0) then
         -- go to you lose
-        composer.gotoScene("main_menu")
+        composer.gotoScene("you_lose2")
     elseif (numberCorrect == 3) then
         -- go to you win
-        composer.gotoScene("splash_screen")
+        composer.gotoScene("you_win2")
     else 
         AskQuestion()
         DisplayRandomAnswers()

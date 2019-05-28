@@ -1,4 +1,4 @@
------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 --
 -- SceneTemplate.lua
 -- Scene Template (Composer API)
@@ -17,7 +17,7 @@ local widget = require( "widget" )
 -----------------------------------------------------------------------------------------
 
 -- Naming Scene
-sceneName = "you_win"
+sceneName = "you_lose2"
 
 -----------------------------------------------------------------------------------------
 
@@ -48,7 +48,7 @@ function scene:create( event )
     local sceneGroup = self.view
 
     -- Display background
-    bkg = display.newImage("Images/YouWinScreen.png")
+    bkg = display.newImage("Images/YouLoseScreen.png")
     bkg.x = display.contentCenterX
     bkg.y = display.contentCenterY
     bkg.width = display.contentWidth
@@ -59,11 +59,12 @@ function scene:create( event )
   
 end    
 
+    timer.performWithDelay(2000, MainMenuTransition)
+
 -----------------------------------------------------------------------------------------
 -- GLOBAL SCENE FUNCTIONS
 -----------------------------------------------------------------------------------------
 
-timer.performWithDelay(2000, MainMenuTransition)
 -----------------------------------------------------------------------------------------
 
 -- The function called when the scene is issued to appear on screen
@@ -148,4 +149,42 @@ scene:addEventListener( "destroy", scene )
 -----------------------------------------------------------------------------------------
 
 return scene
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
