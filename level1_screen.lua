@@ -632,8 +632,13 @@ unmuteButton.isVisible = true
 
     -- create character
     character = display.newImageRect("Images/AlexAbishaJ@2x.png", 100, 150)
-    character.x = display.contentWidth/4
-    character.y = display.contentHeight/1.2
+    character.x = display.contentWidth/2.1
+    character.y = display.contentHeight/1.2 
+
+    -- create spaceship
+    ship = display.newImageRect("Images/RainbowsShipAbishaJ@2x.png", 230, 430)
+    ship.x = display.contentWidth/4
+    ship.y = display.contentHeight/1.2
 -----------------------------------------------------------------------------------------
 
 
@@ -653,6 +658,7 @@ unmuteButton.isVisible = true
     sceneGroup:insert( livesText )
     sceneGroup:insert( numberCorrectText )
     sceneGroup:insert( character )
+    sceneGroup:insert( ship )
     
 end --function scene:create( event )
 
