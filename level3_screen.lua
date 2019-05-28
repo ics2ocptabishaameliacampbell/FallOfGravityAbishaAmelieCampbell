@@ -265,7 +265,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 14) then
 
         -- make fist question visible
-        textQuestion.text = "How long does it take the earth to do one revolution of the sun?"
+        textQuestion.text = "How long does it take the earth to do one\nrevolution of the sun?"
 
          -- make answers visible
         correctAnswer.text = "365 Days"
@@ -301,7 +301,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 17) then
 
         -- make fist question visible
-        textQuestion.text = "What is the name of the force holding us to the Earth?"
+        textQuestion.text = "What is the name of the force holding us to\nthe Earth?"
 
          -- make answers visible
         correctAnswer.text = "Gravity"
@@ -313,7 +313,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 18) then
 
         -- make fist question visible
-        textQuestion.text = "What is the biggest planet in our solar system?"
+        textQuestion.text = "What is the biggest planet in our solar\nsystem?"
 
          -- make answers visible
         correctAnswer.text = "Jupiter"
@@ -325,7 +325,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 19) then
 
         -- make fist question visible
-        textQuestion.text = "What is the smallest planet in our solar system?"
+        textQuestion.text = "What is the smallest planet in our solar\nsystem?"
 
          -- make answers visible
         correctAnswer.text = "Mercury"
@@ -414,9 +414,6 @@ local function RestartScene()
         composer.gotoScene("you_lose3")
     elseif (numberCorrect == 3) then
         -- go to you win
-
-        composer.gotoScene("you_win_level3")
-
         composer.gotoScene("you_win3")
 
     else 
@@ -633,6 +630,11 @@ unmuteButton.isVisible = true
     numberCorrectText = display.newText("Number correct =", display.contentWidth*4/5, display.contentHeight*6/7, nil, 25)
     numberCorrectText:setTextColor(0, 0, 0)
     numberCorrectText.isVisible = true
+
+    -- create character
+    character = display.newImageRect("Images/AlexAbishaJ@2x.png", 100, 150)
+    character.x = display.contentWidth/4
+    character.y = display.contentHeight/1.2
 -----------------------------------------------------------------------------------------
 
 
@@ -651,6 +653,7 @@ unmuteButton.isVisible = true
     sceneGroup:insert( incorrect )
     sceneGroup:insert( livesText )
     sceneGroup:insert( numberCorrectText )
+    sceneGroup:insert( character )
     
 end --function scene:create( event )
 
