@@ -340,10 +340,10 @@ local function AskQuestion()
         textQuestion.text = "What does  ISS stand for?"
 
          -- make answers visible
-        correctAnswer.text = "International Space Station"
-        wrongAnswer1.text = "International States Science"
-        wrongAnswer2.text = "Inexplicable Science Sector"
-        wrongAnswer3.text = "International Space School"    
+        correctAnswer.text = "International Space\nStation"
+        wrongAnswer1.text = "International States\nScience"
+        wrongAnswer2.text = "Inexplicable Science\nSector"
+        wrongAnswer3.text = "International Space\nSchool"    
         
     end
 end
