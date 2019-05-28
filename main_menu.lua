@@ -41,8 +41,6 @@ local bkg_image
 local playButton
 local creditsButton
 local instructionsButton
-local muteButton
-local unmuteButtton
 local levelSelectButton
 
 
@@ -81,31 +79,6 @@ local function LevelSelectTransition( )
     composer.gotoScene( "level_select", {effect = "fade", time = 200})
 end 
 -----------------------------------------------------------------------------------------
-    local function Mute(touch)
-     if (touch.phase == "ended") then
-     -- pause the sound
-     audio.pause(bkgSound)
-     -- set the boolean variable to be false (sound is now muted)
-     soundOn = false
-     -- hide the mute
-     muteButton.isVisible = false
-     -- make the unmute button visible
-     unmuteButton.isVisible = true
- end
-end
-    local function Unmute(touch)
-     if (touch.phase == "ended") then
-     -- pause the sound
-     audio.play(bkgSound)
-     -- set the boolean variable to be false (sound is now muted)
-     soundOn = true
-     -- hide the mute
-     muteButton.isVisible = true
-     -- make the unmute button visible
-     unmuteButton.isVisible = false
- end
-end
-
 
 -----------------------------------------------------------------------------------------
 -- GLOBAL SCENE FUNCTIONS
@@ -215,17 +188,6 @@ function scene:create( event )
             onRelease = LevelSelectTransition
         } ) 
 
-    -------------------------------------------------------------------------------
--- Object creation for mute button
-muteButton = display.newImageRect("Images/unmuteButtonPressedAmelieBo@2x .png", 60, 60)
-muteButton.x = display.contentWidth*0.8/10
-muteButton.y = display.contentHeight*9/10 
-muteButton.isVisible = true
-
-unmuteButton = display.newImageRect("Images/muteButtonUnpressedAmelieBo@2x .png", 60, 60)
-unmuteButton.x = display.contentWidth*0.8/10
-unmuteButton.y = display.contentHeight*9/10
-unmuteButton.isVisible = true
 
 -----------------------------------------------------------------------------------------
 
@@ -233,8 +195,6 @@ unmuteButton.isVisible = true
     sceneGroup:insert( playButton )
     sceneGroup:insert( creditsButton )
     sceneGroup:insert( instructionsButton )
-    sceneGroup:insert( muteButton )
-    sceneGroup:insert( unmuteButton )
     sceneGroup:insert( levelSelectButton )
 
 end -- function scene:create( event )   
@@ -265,8 +225,6 @@ function scene:show( event )
     elseif ( phase == "did" ) then  
         -- start the main menu screen music
         bkgSoundChannel = audio.play( bkgSound, { channel=1, loops=-1} )
-        muteButton:addEventListener( "touch", Mute)
-        unmuteButton:addEventListener( "touch", Unmute)
     end
 
 end -- function scene:show( event )
@@ -295,8 +253,6 @@ function scene:hide( event )
 
     elseif ( phase == "did" ) then
         -- called iediately after scene goes off screen.
-        muteButton:removeEventListener("touch", Mute)
-        unmuteButton:removeEventListener("touch", Unmute)
     end
 
 

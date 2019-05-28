@@ -35,8 +35,6 @@ SoundOn = true
 -- The local variables for this scene
 local bkg_image
 local backButton
-local muteButton
-local unmuteButtton
 
 local randomQuestionNumber
 
@@ -75,31 +73,6 @@ local function BackTransition( )
 end
 
 -----------------------------------------------------------------------------------------
-local function Mute(touch)
-    if (touch.phase == "ended") then
-        -- pause the sound
-        audio.pause(bkgSound)
-        -- set the boolean variable to be false (sound is now muted)
-        soundOn = false
-        -- hide the mute
-        muteButton.isVisible = false
-        -- make the unmute button visible
-        unmuteButton.isVisible = true
-    end
-end
-
-local function Unmute(touch)
-    if (touch.phase == "ended") then
-        -- pause the sound
-        audio.play(bkgSound)
-        -- set the boolean variable to be false (sound is now muted)
-        soundOn = true
-        -- hide the mute
-        muteButton.isVisible = true
-        -- make the unmute button visible
-        unmuteButton.isVisible = false
-    end
-end
 
 local function AskQuestion()
     -- randomly choose 1 out of the 20 questions
@@ -567,16 +540,6 @@ function scene:create( event )
 -------------------------------------------------------------------------------
 -- OBJECT CREATION
 -------------------------------------------------------------------------------
--- create image object for mute and unmute buttons
-muteButton = display.newImageRect("Images/unmuteButtonPressedAmelieBo@2x .png", 60, 60)
-muteButton.x = display.contentWidth*0.8/10
-muteButton.y = display.contentHeight*9/10 
-muteButton.isVisible = true
-
-unmuteButton = display.newImageRect("Images/muteButtonUnpressedAmelieBo@2x .png", 60, 60)
-unmuteButton.x = display.contentWidth*0.8/10
-unmuteButton.y = display.contentHeight*9/10
-unmuteButton.isVisible = true
 
 -----------------------------------------------------------------------------------------
    -- display question 1
@@ -645,8 +608,6 @@ unmuteButton.isVisible = true
     -- Associating Buttons with this scene
     sceneGroup:insert( bkg_image ) 
     sceneGroup:insert( backButton )
-    sceneGroup:insert( muteButton )
-    sceneGroup:insert( unmuteButton )
     sceneGroup:insert( instructionsText )
     sceneGroup:insert( textQuestion)
     sceneGroup:insert( correctAnswer )
@@ -694,8 +655,6 @@ function scene:show( event )
 
         -- start the main menu screen music
         bkgSoundChannel = audio.play( bkgSound, { channel=2, loops=-1} )
-        muteButton:addEventListener( "touch", Mute)
-        unmuteButton:addEventListener( "touch", Unmute)
         RestartScene()
         AddTextObjectListeners()
     end
@@ -726,8 +685,6 @@ function scene:hide( event )
 
     elseif ( phase == "did" ) then
         -- called iediately after scene goes off screen.
-        muteButton:removeEventListener("touch", Mute)
-        unmuteButton:removeEventListener("touch", Unmute)
     end
 
 end --function scene:hide( event )
