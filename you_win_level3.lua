@@ -17,7 +17,7 @@ local widget = require( "widget" )
 -----------------------------------------------------------------------------------------
 
 -- Naming Scene
-sceneName = "you_win"
+sceneName = "you_win_level3"
 
 -----------------------------------------------------------------------------------------
 
@@ -29,7 +29,7 @@ local scene = composer.newScene( sceneName )
 -----------------------------------------------------------------------------------------
 
 local function MainMenuTransition( )       
-    composer.gotoScene( "level1_animation", {effect = "fade", time = 200})
+    composer.gotoScene( "main_menu", {effect = "fade", time = 200})
 end 
 
 -- local variables for the scene
@@ -48,7 +48,7 @@ function scene:create( event )
     local sceneGroup = self.view
 
     -- Display background
-    bkg = display.newImage("Images/YouWinScreen.png")
+    bkg = display.newImage("Images/YouWinScreenLevel3 .png")
     bkg.x = display.contentCenterX
     bkg.y = display.contentCenterY
     bkg.width = display.contentWidth
