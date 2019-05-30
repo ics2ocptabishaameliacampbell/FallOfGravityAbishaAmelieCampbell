@@ -17,7 +17,7 @@ local widget = require( "widget" )
 -----------------------------------------------------------------------------------------
 
 -- Naming Scene
-sceneName = "you_lose"
+sceneName = "Level3_popup"
 
 -----------------------------------------------------------------------------------------
 
@@ -59,7 +59,7 @@ function scene:create( event )
   
 end    
 
-    timer.performWithDelay(1000, Level3Transition)
+    timer.performWithDelay(800, Level3Transition)
 
 -----------------------------------------------------------------------------------------
 -- GLOBAL SCENE FUNCTIONS

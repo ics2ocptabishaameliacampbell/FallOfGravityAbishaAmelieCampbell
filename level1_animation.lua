@@ -29,7 +29,7 @@ local scene = composer.newScene( sceneName )
 -----------------------------------------------------------------------------------------
 
 local function MainMenuTransition( )       
-    composer.gotoScene( "level2_screen", {effect = "fade", time = 200})
+    composer.gotoScene( "Level2_popup", {effect = "fade", time = 200})
 end 
 
 -- local variables for the scene
@@ -74,7 +74,7 @@ end
 -- GLOBAL SCENE FUNCTIONS
 -----------------------------------------------------------------------------------------
 
-timer.performWithDelay(1000, MainMenuTransition)
+timer.performWithDelay(800, MainMenuTransition)
 -----------------------------------------------------------------------------------------
 
 -- The function called when the scene is issued to appear on screen
