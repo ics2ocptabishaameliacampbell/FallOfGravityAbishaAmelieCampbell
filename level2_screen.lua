@@ -68,6 +68,30 @@ local bkgSoundChannel
 -----------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
 -----------------------------------------------------------------------------------------
+-- The function called when the screen doesn't exist
+function scene:create( event )
+
+    -- Creating a group that associates objects with the scene
+    local sceneGroup = self.view
+
+    -- Display background
+    bkg = display.newImage("Images/Level2PopupAbishaJ@2x.png")
+    bkg.x = display.contentCenterX
+    bkg.y = display.contentCenterY
+    bkg.width = display.contentWidth
+    bkg.height = display.contentHeight
+   
+    -- Associating display objects with this scene 
+    sceneGroup:insert( bkg )
+  
+end    
+
+    timer.performWithDelay(2000, MainMenuTransition)
+
+-- The function that will go to the main menu 
+local function gotoLevel2()
+    composer.gotoScene( "level2_screen" )
+end
 
 -- Creating Transitioning Function back to main menu
 local function BackTransition( )
@@ -205,7 +229,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 9) then
 
         -- make fist question visible
-        textQuestion.text = "What is 'chickcen' in french."
+        textQuestion.text = "What is 'chicken' in french."
 
          -- make answers visible
         correctAnswer.text = "poulet"

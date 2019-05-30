@@ -57,16 +57,16 @@ end
 
 -- Creating Transition to Level1 Screen
 local function Level1ScreenTransition( )
-    composer.gotoScene( "level1_screen", {effect = "fade", time = 200})
+    composer.gotoScene( "Level1_popup", {effect = "fade", time = 200})
 end    
 
 -- Creating Transition to Level2 Screen
 local function Level2ScreenTransition( )
-    composer.gotoScene( "level2_screen", {effect = "fade", time = 200})
+    composer.gotoScene( "Level2_popup", {effect = "fade", time = 200})
 end    
 
 local function Level3ScreenTransition( )
-    composer.gotoScene( "level3_screen", {effect = "fade", time = 200})
+    composer.gotoScene( "level3_popup", {effect = "fade", time = 200})
 end    
 -----------------------------------------------------------------------------------------
     local function Mute(touch)

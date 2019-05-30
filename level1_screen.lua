@@ -69,6 +69,11 @@ local bkgSoundChannel
 -- LOCAL FUNCTIONS
 -----------------------------------------------------------------------------------------
 
+-- Creating Transition to Level1 Screen
+local function Level1ScreenTransition( )
+    composer.gotoScene( "level1_screen", {effect = "fade", time = 200})
+end  
+
 -- Creating Transitioning Function back to main menu
 local function BackTransition( )
     composer.gotoScene( "main_menu", {effect = "fade", time = 200})
