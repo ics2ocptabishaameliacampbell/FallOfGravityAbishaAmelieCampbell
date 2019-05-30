@@ -17,7 +17,7 @@ local widget = require( "widget" )
 -----------------------------------------------------------------------------------------
 
 -- Naming Scene
-sceneName = "you_win"
+sceneName = "level2_animation"
 
 -----------------------------------------------------------------------------------------
 
@@ -29,12 +29,14 @@ local scene = composer.newScene( sceneName )
 -----------------------------------------------------------------------------------------
 
 local function MainMenuTransition( )       
-    composer.gotoScene( "level1_animation", {effect = "fade", time = 200})
+    composer.gotoScene( "level3_screen", {effect = "fade", time = 200})
 end 
 
 -- local variables for the scene
 local bkg
-
+local rocket
+local sound = audio.loadSound("Sounds/RocketAmelie@2x.png")
+local soundChannel
 ----------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
@@ -48,14 +50,23 @@ function scene:create( event )
     local sceneGroup = self.view
 
     -- Display background
-    bkg = display.newImage("Images/YouWinScreen.png")
+    bkg = display.newImage("Images/Level2AnimationAmelieBO@2x .png")
     bkg.x = display.contentCenterX
     bkg.y = display.contentCenterY
     bkg.width = display.contentWidth
     bkg.height = display.contentHeight
+
+    -- insert the image 
+    rocket = display.newImage("Images/RocketAmelie@2x.png", 10, 10)
+
+    rocket.x = 0
+    rocket.y = 600
+
+    transition.to(rocket, {x=1500, y=200, time=1000})
    
     -- Associating display objects with this scene 
     sceneGroup:insert( bkg )
+    sceneGroup:insert( rocket )
   
 end    
 
@@ -63,7 +74,7 @@ end
 -- GLOBAL SCENE FUNCTIONS
 -----------------------------------------------------------------------------------------
 
-timer.performWithDelay(2000, MainMenuTransition)
+timer.performWithDelay(1000, MainMenuTransition)
 -----------------------------------------------------------------------------------------
 
 -- The function called when the scene is issued to appear on screen
