@@ -29,7 +29,7 @@ local scene = composer.newScene( sceneName )
 -----------------------------------------------------------------------------------------
 
 local function MainMenuTransition( )       
-    composer.gotoScene( "Level2_popup", {effect = "fade", time = 200})
+    composer.gotoScene( "level2_popup", {effect = "fade", time = 200})
 end 
 
 -- local variables for the scene
