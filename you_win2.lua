@@ -71,7 +71,7 @@ end
 -- GLOBAL SCENE FUNCTIONS
 -----------------------------------------------------------------------------------------
 
-timer.performWithDelay(2000, MainMenuTransition)
+
 -----------------------------------------------------------------------------------------
 
 -- The function called when the scene is issued to appear on screen
@@ -99,6 +99,7 @@ function scene:show( event )
         -- Called immediately after scene goes off screen.
         -- start the music
         WinSoundChannel = audio.play(WinSound, { channel=9, loops=-1 })
+        timer.performWithDelay(2000, MainMenuTransition)
 
     end
 

@@ -73,7 +73,7 @@ end
 -- GLOBAL SCENE FUNCTIONS
 -----------------------------------------------------------------------------------------
 
-timer.performWithDelay(2000, MainMenuTransition)
+
 -----------------------------------------------------------------------------------------
 
 -- The function called when the scene is issued to appear on screen
@@ -100,6 +100,7 @@ function scene:show( event )
         -- Example: start timers, begin animation, play audio, etc.
         -- start the music
         WinSoundChannel = audio.play(WinSound, { channel=8, loops=-1 })
+        timer.performWithDelay(2000, MainMenuTransition)
     end
 
 end
