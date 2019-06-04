@@ -224,7 +224,7 @@ function scene:show( event )
     -- Example: start timers, begin animation, play audio, etc.
     elseif ( phase == "did" ) then  
         -- start the main menu screen music
-        bkgSoundChannel = audio.play( bkgSound, { channel=1, loops=-1} )
+        bkgSoundChannel = audio.play( bkgSound, { channel=7, loops=-1} )
     end
 
 end -- function scene:show( event )

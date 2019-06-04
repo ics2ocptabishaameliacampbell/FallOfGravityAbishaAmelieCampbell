@@ -24,21 +24,27 @@ sceneName = "you_win3"
 -- Creating Scene Object
 local scene = composer.newScene( sceneName )
 
+
 -----------------------------------------------------------------------------------------
--- FORWARD REFERENCES
+-- SOUNDS
+-----------------------------------------------------------------------------------------
+local WinSound = audio.loadSound( "Sounds/Correct Answer Sound Effect.mp3")
+local WinSoundChannel
+
+-----------------------------------------------------------------------------------------
+-- LOCAL VARIABLES
+-----------------------------------------------------------------------------------------
+-- local variables for the scene
+local bkg
+-----------------------------------------------------------------------------------------
+-- LOCAL FUNCTIONS
 -----------------------------------------------------------------------------------------
 
 local function MainMenuTransition( )       
     composer.gotoScene( "level3_animation", {effect = "fade", time = 200})
 end 
 
--- local variables for the scene
-local bkg
-
 ----------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------
--- LOCAL FUNCTIONS
------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------
 -- The function called when the screen doesn't exist
@@ -88,6 +94,8 @@ function scene:show( event )
         -- Called when the scene is now on screen.
         -- Insert code here to make the scene come alive.
         -- Example: start timers, begin animation, play audio, etc.
+        -- start the music
+        WinSoundChannel = audio.play(WinSound, { channel=10, loops=-1 })
     end
 
 end
@@ -115,6 +123,8 @@ function scene:hide( event )
 
     elseif ( phase == "did" ) then
         -- Called immediately after scene goes off screen.
+        -- stop the win sound channel for this screen
+        audio.stop(10)
     end
 
 end

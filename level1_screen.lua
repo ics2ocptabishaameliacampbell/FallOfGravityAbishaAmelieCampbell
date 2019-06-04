@@ -657,7 +657,7 @@ function scene:show( event )
         numberCorrect = 0
 
         -- start the main menu screen music
-        bkgSoundChannel = audio.play( bkgSound, { channel=2, loops=-1} )
+        bkgSoundChannel = audio.play( bkgSound, { channel=3, loops=-1} )
         RestartScene()
         AddTextObjectListeners()
     end
@@ -687,7 +687,7 @@ function scene:hide( event )
     -----------------------------------------------------------------------------------------
 
     elseif ( phase == "did" ) then
-        -- called iediately after scene goes off screen.
+        -- called imediately after scene goes off screen.
     end
 
 end --function scene:hide( event )

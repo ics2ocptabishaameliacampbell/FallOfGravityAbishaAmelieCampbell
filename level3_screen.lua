@@ -654,7 +654,7 @@ function scene:show( event )
         numberCorrect = 0
 
         -- start the main menu screen music
-        bkgSoundChannel = audio.play( bkgSound, { channel=2, loops=-1} )
+        bkgSoundChannel = audio.play( bkgSound, { channel=5, loops=-1} )
         RestartScene()
         AddTextObjectListeners()
     end

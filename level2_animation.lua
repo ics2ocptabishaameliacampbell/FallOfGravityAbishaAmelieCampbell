@@ -35,8 +35,6 @@ end
 -- local variables for the scene
 local bkg
 local rocket
-local sound = audio.loadSound("Sounds/RocketAmelie@2x.png")
-local soundChannel
 ----------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS

@@ -23,17 +23,24 @@ sceneName = "you_lose2"
 
 -- Creating Scene Object
 local scene = composer.newScene( sceneName )
-
 -----------------------------------------------------------------------------------------
--- FORWARD REFERENCES
+-- SOUNDS
+-----------------------------------------------------------------------------------------
+local LoseSound = audio.loadSound( "Sounds/Wrong Buzzer Sound Effect.mp3")
+local LoseSoundChannel
+-----------------------------------------------------------------------------------------
+-- LOCAL VARIABLES
+-----------------------------------------------------------------------------------------
+
+-- local variables for the scene
+local bkg
+-----------------------------------------------------------------------------------------
+-- LOCAL FUNCTIONS
 -----------------------------------------------------------------------------------------
 
 local function MainMenuTransition( )       
     composer.gotoScene( "level2_screen", {effect = "fade", time = 200})
 end 
-
--- local variables for the scene
-local bkg
 
 ----------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------
@@ -59,7 +66,7 @@ function scene:create( event )
   
 end    
 
-    timer.performWithDelay(2000, MainMenuTransition)
+    
 
 -----------------------------------------------------------------------------------------
 -- GLOBAL SCENE FUNCTIONS
@@ -89,6 +96,8 @@ function scene:show( event )
         -- Called when the scene is now on screen.
         -- Insert code here to make the scene come alive.
         -- Example: start timers, begin animation, play audio, etc.
+        LoseSoundChannel = audio.play(LoseSound, { channel=12})
+        timer.performWithDelay(2000, MainMenuTransition)
     end
 
 end
@@ -116,6 +125,8 @@ function scene:hide( event )
 
     elseif ( phase == "did" ) then
         -- Called immediately after scene goes off screen.
+        -- stop the win sound channel for this screen
+        audio.stop(12)
     end
 
 end

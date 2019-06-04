@@ -678,7 +678,7 @@ function scene:show( event )
         numberCorrect = 0
 
         -- start the main menu screen music
-        bkgSoundChannel = audio.play( bkgSound, { channel=2, loops=-1} )
+        bkgSoundChannel = audio.play( bkgSound, { channel=4, loops=-1} )
         RestartScene()
         AddTextObjectListeners()
     end
@@ -700,7 +700,7 @@ function scene:hide( event )
         -- Called when the scene is on screen (but is about to go off screen).
         -- Insert code here to "pause" the scene.
         -- Example: stop timers, stop animation, stop audio, etc.
-        audio.stop(bkgSoundChannel)
+        audio.stop(4)
 
         -- remove the listeners when leaving the scene
         RemoveTextObjectListeners()

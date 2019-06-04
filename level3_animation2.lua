@@ -1,4 +1,4 @@
----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
 --
 -- SceneTemplate.lua
 -- Scene Template (Composer API)
@@ -17,30 +17,25 @@ local widget = require( "widget" )
 -----------------------------------------------------------------------------------------
 
 -- Naming Scene
-sceneName = "you_lose"
+sceneName = "level3_animation2"
 
 -----------------------------------------------------------------------------------------
 
 -- Creating Scene Object
 local scene = composer.newScene( sceneName )
------------------------------------------------------------------------------------------
--- SOUNDS
------------------------------------------------------------------------------------------
-local LoseSound = audio.loadSound( "Sounds/Wrong Buzzer Sound Effect.mp3")
-local LoseSoundChannel
------------------------------------------------------------------------------------------
--- LOCAL VARIABLES
------------------------------------------------------------------------------------------
 
--- local variables for the scene
-local bkg
 -----------------------------------------------------------------------------------------
--- LOCAL FUNCTIONS
+-- FORWARD REFERENCES
 -----------------------------------------------------------------------------------------
 
 local function MainMenuTransition( )       
-    composer.gotoScene( "level1_screen", {effect = "fade", time = 200})
+    composer.gotoScene( "main_menu", {effect = "fade", time = 200})
 end 
+
+-- local variables for the scene
+local bkg
+local rocket
+local character
 ----------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
@@ -54,22 +49,38 @@ function scene:create( event )
     local sceneGroup = self.view
 
     -- Display background
-    bkg = display.newImage("Images/YouLoseScreen.png")
+    bkg = display.newImage("Images/Level3EndOfGameAmelieBO@2x.png")
     bkg.x = display.contentCenterX
     bkg.y = display.contentCenterY
     bkg.width = display.contentWidth
     bkg.height = display.contentHeight
-   
+
+    -- insert the image 
+    rocket = display.newImageRect("Images/RainbowsShipAbishaJ@2x.png", 300, 600)
+
+    rocket.x = 700
+    rocket.y = 500
+
+    -- insert the image 
+    character = display.newImageRect("Images/AlexAbishaJ@2x.png", 100, 200)
+
+    character.x = 200
+    character.y = 500
+
+    transition.to(character, {x=200, y=450, time=1000})
+
     -- Associating display objects with this scene 
     sceneGroup:insert( bkg )
+    sceneGroup:insert( rocket )
+    sceneGroup:insert( character )
   
 end    
-
 
 -----------------------------------------------------------------------------------------
 -- GLOBAL SCENE FUNCTIONS
 -----------------------------------------------------------------------------------------
 
+timer.performWithDelay(800, MainMenuTransition)
 -----------------------------------------------------------------------------------------
 
 -- The function called when the scene is issued to appear on screen
@@ -94,8 +105,6 @@ function scene:show( event )
         -- Called when the scene is now on screen.
         -- Insert code here to make the scene come alive.
         -- Example: start timers, begin animation, play audio, etc.
-        LoseSoundChannel = audio.play(LoseSound, { channel=13,})
-        timer.performWithDelay(2000, MainMenuTransition)
     end
 
 end
@@ -123,8 +132,6 @@ function scene:hide( event )
 
     elseif ( phase == "did" ) then
         -- Called immediately after scene goes off screen.
-        -- stop the win sound channel for this screen
-        audio.stop(LoseSoundChannel)
     end
 
 end
@@ -158,42 +165,4 @@ scene:addEventListener( "destroy", scene )
 -----------------------------------------------------------------------------------------
 
 return scene
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

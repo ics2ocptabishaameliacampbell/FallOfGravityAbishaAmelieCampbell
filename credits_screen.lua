@@ -136,7 +136,7 @@ function scene:show( event )
         -- Insert code here to make the scene come alive.
         -- Example: start timers, begin animation, play audio, etc.
         -- start the credits screen music
-        bkgSoundChannel = audio.play( bkgSound, { channel=4, loops=-1} ) 
+        bkgSoundChannel = audio.play( bkgSound, { channel=1, loops=-1} ) 
     end
 end -- function scene:show( event )
 
