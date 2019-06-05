@@ -35,6 +35,8 @@ SoundOn = true
 -- The local variables for this scene
 local bkg_image
 local backButton
+local muteButton
+local unmuteButtton
 
 local randomQuestionNumber
 
@@ -68,7 +70,7 @@ local bkgSoundChannel
 -----------------------------------------------------------------------------------------
 
 -- Creating Transition to Level1 Screen
-local function Level1ScreenTransition( )
+local function LevelScreenTransition( )
     composer.gotoScene( "level1_screen", {effect = "fade", time = 200})
 end  
 
@@ -78,6 +80,32 @@ local function BackTransition( )
 end
 
 -----------------------------------------------------------------------------------------
+local function Mute(touch)
+    if (touch.phase == "ended") then
+        -- pause the sound
+        audio.pause(bkgSound)
+        -- set the boolean variable to be false (sound is now muted)
+        soundOn = false
+        -- hide the mute
+        muteButton.isVisible = false
+        -- make the unmute button visible
+        unmuteButton.isVisible = true
+    end
+end
+
+local function Unmute(touch)
+    if (touch.phase == "ended") then
+        -- pause the sound
+        audio.play(bkgSound)
+        -- set the boolean variable to be false (sound is now muted)
+        soundOn = true
+        -- hide the mute
+        muteButton.isVisible = true
+        -- make the unmute button visible
+        unmuteButton.isVisible = false
+    end
+end
+
 local function AskQuestion()
     -- randomly choose 1 out of the 20 questions
     randomQuestionNumber = math.random(1,20)
@@ -86,7 +114,7 @@ local function AskQuestion()
     if (randomQuestionNumber == 1) then
 
         -- make fist question visible
-        textQuestion.text = "There are eight PLANITS\nin our solar system."
+        textQuestion.text = "There are eight PLANITS in our solar system."
 
          -- make answers visible
         correctAnswer.text = "Planets"
@@ -98,7 +126,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 2) then
 
         -- make fist question visible
-        textQuestion.text = "A person who travels to outerspace\nis called an ASTRONOT."
+        textQuestion.text = "A person who travels to outerspace is called an\nASTRONOT."
 
          -- make answers visible
         correctAnswer.text = "astronaut"
@@ -110,7 +138,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 3) then
 
         -- make fist question visible
-        textQuestion.text = "The earth made one REVELUSHION\naround the sun."
+        textQuestion.text = "The earth made one REVELUSHION around the sun."
 
          -- make answers visible
         correctAnswer.text = "  revolution "
@@ -122,7 +150,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 4) then
 
         -- make fist question visible
-        textQuestion.text = "The ATMASFERE layer closest\nto the earth."
+        textQuestion.text = "The ATMASFERE layer closest to the earth."
 
          -- make answers visible
         correctAnswer.text = "    atmosphere  "
@@ -182,7 +210,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 9) then
 
         -- make fist question visible
-        textQuestion.text = "An EICUINOX is when the sun\nis over the equator."
+        textQuestion.text = "An EICUINOX is when the sun is over the equator."
 
          -- make answers visible
         correctAnswer.text = "equinox"
@@ -242,7 +270,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 14) then
 
         -- make fist question visible
-        textQuestion.text = "PLUETTOE is the largest\ndwarf planet."
+        textQuestion.text = "PLUETTOE is the largest dwarf planet."
 
          -- make answers visible
         correctAnswer.text = "Pluto"
@@ -254,7 +282,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 15) then
 
         -- make fist question visible
-        textQuestion.text = "One day on VENOSS is longer\nthan one year."
+        textQuestion.text = "One day on VENOSS is longer than one year."
 
          -- make answers visible
         correctAnswer.text = "venus"
@@ -278,7 +306,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 17) then
 
         -- make fist question visible
-        textQuestion.text = "CUMMITTS are found traveling\nthroughout space."
+        textQuestion.text = "CUMMITTS are found traveling throughout space."
 
          -- make answers visible
         correctAnswer.text = "Comets"
@@ -290,7 +318,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 18) then
 
         -- make fist question visible
-        textQuestion.text = "A NEBUELLA is an interstellar\ncloud of dust."
+        textQuestion.text = "A NEBUELLA is an interstellar cloud of dust."
 
          -- make answers visible
         correctAnswer.text = "nebula"
@@ -544,6 +572,17 @@ function scene:create( event )
 -------------------------------------------------------------------------------
 -- OBJECT CREATION
 -------------------------------------------------------------------------------
+-- create image object for mute and unmute buttons
+muteButton = display.newImageRect("Images/unmuteButtonPressedAmelieBo@2x .png", 60, 60)
+muteButton.x = display.contentWidth*0.8/10
+muteButton.y = display.contentHeight*9/10 
+muteButton.isVisible = true
+
+unmuteButton = display.newImageRect("Images/muteButtonUnpressedAmelieBo@2x .png", 60, 60)
+unmuteButton.x = display.contentWidth*0.8/10
+unmuteButton.y = display.contentHeight*9/10
+unmuteButton.isVisible = true
+
 -----------------------------------------------------------------------------------------
    -- display question 1
     instructionsText = display.newText( "Level 1- Click on the correct spelling", 515, 70, nil, 40)
@@ -551,28 +590,28 @@ function scene:create( event )
     instructionsText:setTextColor(1, 1, 1)
 
     -- display question 1
-    textQuestion = display.newText( "", 500, 160, nil, 48)
+    textQuestion = display.newText( "", 500, 150, nil, 40)
     -- set the color of the text to be white
     textQuestion:setTextColor(1, 1, 1)
 
 
     -- display question 1
-    correctAnswer = display.newText( "", 700, 350, nil, 45)
+    correctAnswer = display.newText( "", 700, 350, nil, 40)
     -- set the color of the text to be white
     correctAnswer:setTextColor(1, 1, 1)
 
     -- display question 1
-    wrongAnswer1 = display.newText( "", 300, 285, nil, 45)
+    wrongAnswer1 = display.newText( "", 300, 285, nil, 40)
     -- set the color of the text to be white
     wrongAnswer1:setTextColor(1, 1, 1)
 
     -- display question 1
-    wrongAnswer2 = display.newText( "", 700, 285, nil, 45)
+    wrongAnswer2 = display.newText( "", 700, 285, nil, 40)
     -- set the color of the text to be white
     wrongAnswer2:setTextColor(1, 1, 1)
 
     -- display question 1
-    wrongAnswer3 = display.newText( "", 300, 350, nil, 45)
+    wrongAnswer3 = display.newText( "", 300, 350, nil, 40)
     -- set the color of the text to be white
     wrongAnswer3:setTextColor(1, 1, 1)
 
@@ -611,6 +650,8 @@ function scene:create( event )
     -- Associating Buttons with this scene
     sceneGroup:insert( bkg_image ) 
     sceneGroup:insert( backButton )
+    sceneGroup:insert( muteButton )
+    sceneGroup:insert( unmuteButton )
     sceneGroup:insert( instructionsText )
     sceneGroup:insert( textQuestion)
     sceneGroup:insert( correctAnswer )
@@ -657,7 +698,9 @@ function scene:show( event )
         numberCorrect = 0
 
         -- start the main menu screen music
-        bkgSoundChannel = audio.play( bkgSound, { channel=3, loops=-1} )
+        bkgSoundChannel = audio.play( bkgSound, { channel=2, loops=-1} )
+        muteButton:addEventListener( "touch", Mute)
+        unmuteButton:addEventListener( "touch", Unmute)
         RestartScene()
         AddTextObjectListeners()
     end
@@ -687,7 +730,9 @@ function scene:hide( event )
     -----------------------------------------------------------------------------------------
 
     elseif ( phase == "did" ) then
-        -- called imediately after scene goes off screen.
+        -- called iediately after scene goes off screen.
+        muteButton:removeEventListener("touch", Mute)
+        unmuteButton:removeEventListener("touch", Unmute)
     end
 
 end --function scene:hide( event )
