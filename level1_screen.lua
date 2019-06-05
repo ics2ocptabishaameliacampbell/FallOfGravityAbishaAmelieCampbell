@@ -86,7 +86,7 @@ local function AskQuestion()
     if (randomQuestionNumber == 1) then
 
         -- make fist question visible
-        textQuestion.text = "There are eight PLANITS in our solar system."
+        textQuestion.text = "There are eight PLANITS\nin our solar system."
 
          -- make answers visible
         correctAnswer.text = "Planets"
@@ -98,7 +98,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 2) then
 
         -- make fist question visible
-        textQuestion.text = "A person who travels to outerspace is called an\nASTRONOT."
+        textQuestion.text = "A person who travels to outerspace\nis called an ASTRONOT."
 
          -- make answers visible
         correctAnswer.text = "astronaut"
@@ -110,7 +110,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 3) then
 
         -- make fist question visible
-        textQuestion.text = "The earth made one REVELUSHION around the sun."
+        textQuestion.text = "The earth made one REVELUSHION\naround the sun."
 
          -- make answers visible
         correctAnswer.text = "  revolution "
@@ -122,7 +122,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 4) then
 
         -- make fist question visible
-        textQuestion.text = "The ATMASFERE layer closest to the earth."
+        textQuestion.text = "The ATMASFERE layer closest\nto the earth."
 
          -- make answers visible
         correctAnswer.text = "    atmosphere  "
@@ -182,7 +182,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 9) then
 
         -- make fist question visible
-        textQuestion.text = "An EICUINOX is when the sun is over the equator."
+        textQuestion.text = "An EICUINOX is when the sun\nis over the equator."
 
          -- make answers visible
         correctAnswer.text = "equinox"
@@ -242,7 +242,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 14) then
 
         -- make fist question visible
-        textQuestion.text = "PLUETTOE is the largest dwarf planet."
+        textQuestion.text = "PLUETTOE is the largest\ndwarf planet."
 
          -- make answers visible
         correctAnswer.text = "Pluto"
@@ -254,7 +254,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 15) then
 
         -- make fist question visible
-        textQuestion.text = "One day on VENOSS is longer than one year."
+        textQuestion.text = "One day on VENOSS is longer\nthan one year."
 
          -- make answers visible
         correctAnswer.text = "venus"
@@ -278,7 +278,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 17) then
 
         -- make fist question visible
-        textQuestion.text = "CUMMITTS are found traveling throughout space."
+        textQuestion.text = "CUMMITTS are found traveling\nthroughout space."
 
          -- make answers visible
         correctAnswer.text = "Comets"
@@ -290,7 +290,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 18) then
 
         -- make fist question visible
-        textQuestion.text = "A NEBUELLA is an interstellar cloud of dust."
+        textQuestion.text = "A NEBUELLA is an interstellar\ncloud of dust."
 
          -- make answers visible
         correctAnswer.text = "nebula"
@@ -551,28 +551,28 @@ function scene:create( event )
     instructionsText:setTextColor(1, 1, 1)
 
     -- display question 1
-    textQuestion = display.newText( "", 500, 150, nil, 40)
+    textQuestion = display.newText( "", 500, 160, nil, 48)
     -- set the color of the text to be white
     textQuestion:setTextColor(1, 1, 1)
 
 
     -- display question 1
-    correctAnswer = display.newText( "", 700, 350, nil, 40)
+    correctAnswer = display.newText( "", 700, 350, nil, 45)
     -- set the color of the text to be white
     correctAnswer:setTextColor(1, 1, 1)
 
     -- display question 1
-    wrongAnswer1 = display.newText( "", 300, 285, nil, 40)
+    wrongAnswer1 = display.newText( "", 300, 285, nil, 45)
     -- set the color of the text to be white
     wrongAnswer1:setTextColor(1, 1, 1)
 
     -- display question 1
-    wrongAnswer2 = display.newText( "", 700, 285, nil, 40)
+    wrongAnswer2 = display.newText( "", 700, 285, nil, 45)
     -- set the color of the text to be white
     wrongAnswer2:setTextColor(1, 1, 1)
 
     -- display question 1
-    wrongAnswer3 = display.newText( "", 300, 350, nil, 40)
+    wrongAnswer3 = display.newText( "", 300, 350, nil, 45)
     -- set the color of the text to be white
     wrongAnswer3:setTextColor(1, 1, 1)
 

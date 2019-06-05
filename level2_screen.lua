@@ -571,28 +571,28 @@ function scene:create( event )
     instructionsText:setTextColor(1, 1, 1)
 
     -- display question 1
-    textQuestion = display.newText( "", 500, 150, nil, 40)
+    textQuestion = display.newText( "", 500, 160, nil, 48)
     -- set the color of the text to be white
     textQuestion:setTextColor(1, 1, 1)
 
 
     -- display question 1
-    correctAnswer = display.newText( "", 700, 350, nil, 40)
+    correctAnswer = display.newText( "", 700, 350, nil, 45)
     -- set the color of the text to be white
     correctAnswer:setTextColor(1, 1, 1)
 
     -- display question 1
-    wrongAnswer1 = display.newText( "", 300, 285, nil, 40)
+    wrongAnswer1 = display.newText( "", 300, 285, nil, 45)
     -- set the color of the text to be white
     wrongAnswer1:setTextColor(1, 1, 1)
 
     -- display question 1
-    wrongAnswer2 = display.newText( "", 700, 285, nil, 40)
+    wrongAnswer2 = display.newText( "", 700, 285, nil, 45)
     -- set the color of the text to be white
     wrongAnswer2:setTextColor(1, 1, 1)
 
     -- display question 1
-    wrongAnswer3 = display.newText( "", 300, 350, nil, 40)
+    wrongAnswer3 = display.newText( "", 300, 350, nil, 45)
     -- set the color of the text to be white
     wrongAnswer3:setTextColor(1, 1, 1)
 
