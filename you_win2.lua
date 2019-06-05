@@ -98,7 +98,7 @@ function scene:show( event )
         -- Example: start timers, begin animation, play audio, etc.
         -- Called immediately after scene goes off screen.
         -- start the music
-        WinSoundChannel = audio.play(WinSound, { channel=9, loops=-1 })
+        WinSoundChannel = audio.play(WinSound, { channel=9,})
         timer.performWithDelay(2000, MainMenuTransition)
 
     end
