@@ -41,6 +41,10 @@ local randomQuestionNumber
 -- displays the number of lives the user has
 local livesText 
 
+-- local variables to for correct and incorrect to be displayed
+local correct
+local incorrect
+
 -- variables for questions
 local instructionsText
 
@@ -464,7 +468,6 @@ local function TouchListenerWrongAnswer3(touch)
         -- call RestartScene after 1 second
         timer.performWithDelay( 1000, RestartScene )            
    
-
     end
 end
 

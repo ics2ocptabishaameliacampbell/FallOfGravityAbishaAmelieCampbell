@@ -41,6 +41,14 @@ local randomQuestionNumber
 -- displays the number of lives the user has
 local livesText 
 
+-- local variables to for correct and incorrect to be displayed
+local correct
+local incorrect
+
+-- local variables to display correct and incorrect
+local correct
+local incorrect
+
 -- variables for questions
 local instructionsText
 
