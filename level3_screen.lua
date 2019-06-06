@@ -393,7 +393,6 @@ local function RestartScene()
         AskQuestion()
         DisplayRandomAnswers()
     end
-
 end
 
 -- Functions that checks if the buttons have been clicked.
@@ -422,7 +421,6 @@ local function TouchListenerWrongAnswer1(touch)
     if (touch.phase == "ended") and (alreadyClickedAnswer == false) then
 
         alreadyClickedAnswer = true
-
 
         incorrect.isVisible = true
         -- decrease a life
@@ -676,7 +674,7 @@ function scene:hide( event )
         -- Called when the scene is on screen (but is about to go off screen).
         -- Insert code here to "pause" the scene.
         -- Example: stop timers, stop animation, stop audio, etc.
-        audio.stop(bkgSoundChannel)
+        audio.stop(5)
 
         -- remove the listeners when leaving the scene
         RemoveTextObjectListeners()

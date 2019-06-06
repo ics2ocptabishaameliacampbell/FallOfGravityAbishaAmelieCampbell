@@ -463,7 +463,6 @@ local function TouchListenerWrongAnswer2(touch)
 
         alreadyClickedAnswer = true
 
-
         incorrect.isVisible = true
         -- decrease a life
         lives = lives - 1
