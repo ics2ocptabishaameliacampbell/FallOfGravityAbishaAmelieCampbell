@@ -42,7 +42,7 @@ local bkg
 
 local function MainMenuTransition( )       
     composer.gotoScene( "level3_animation", {effect = "fade", time = 200})
-end 
+end   
 
 ----------------------------------------------------------------------------------------
 
