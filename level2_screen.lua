@@ -165,7 +165,7 @@ local function AskQuestion()
         textQuestion.text = "What is 'whiteboard' in french?. "
 
          -- make answers visible
-        correctAnswer.text = "tableu blanc"
+        correctAnswer.text = "tableau blanc"
         wrongAnswer1.text = "table blanc"
         wrongAnswer2.text = "tableau noir"
         wrongAnswer3.text = "tableau bleu"
