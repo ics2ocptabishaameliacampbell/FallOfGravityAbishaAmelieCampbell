@@ -60,7 +60,6 @@ function scene:create( event )
     rocket.x = 0
     rocket.y = 600
 
-    transition.to(rocket, {x=1500, y=300, time=1000})
    
     -- Associating display objects with this scene 
     sceneGroup:insert( bkg )
@@ -98,6 +97,7 @@ function scene:show( event )
         -- Insert code here to make the scene come alive.
         -- Example: start timers, begin animation, play audio, etc.
         timer.performWithDelay(800, MainMenuTransition)
+        
     end
 
 end
@@ -120,11 +120,13 @@ function scene:hide( event )
         -- Called when the scene is on screen (but is about to go off screen).
         -- Insert code here to "pause" the scene.
         -- Example: stop timers, stop animation, stop audio, etc.
+        transition.to(rocket, {x=1500, y=300, time=1000})
 
     -----------------------------------------------------------------------------------------
 
     elseif ( phase == "did" ) then
         -- Called immediately after scene goes off screen.
+
     end
 
 end
