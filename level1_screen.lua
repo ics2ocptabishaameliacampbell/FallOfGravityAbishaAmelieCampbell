@@ -138,7 +138,7 @@ local function AskQuestion()
     elseif (randomQuestionNumber == 5) then
 
         -- make fist question visible
-        textQuestion.text = "A group of stars forming a \n recognizable pattern is a CONSTALATION. "
+        textQuestion.text = "A group of stars forming a\nrecognizable pattern is a CONSTALATION. "
 
          -- make answers visible
         correctAnswer.text = "constellation"
